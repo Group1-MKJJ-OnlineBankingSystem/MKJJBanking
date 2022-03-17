@@ -20,7 +20,7 @@
         $_SESSION['depositSuccess'] = '';
     } 
     else if ($_SESSION['deposit_failed'] == 'doesntOwnAcct'){
-        $notice = 'That Account Does Not Belong To You or Does Not Exist';
+        $notice = 'That Account Does Not Belong to You or Does Not Exist';
         $_SESSION['deposit_failed'] = '';
     }
     
