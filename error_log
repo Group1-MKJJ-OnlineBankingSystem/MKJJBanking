@@ -1,0 +1,8 @@
+[07-Feb-2022 20:06:41 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_888fbe3eb4783bec84de5d44d8ae7b84, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/login.php on line 3
+[07-Feb-2022 20:06:41 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/login.php on line 3
+[07-Feb-2022 20:06:43 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_888fbe3eb4783bec84de5d44d8ae7b84, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/register.php on line 3
+[07-Feb-2022 20:06:43 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/register.php on line 3
+[08-Feb-2022 17:51:46 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_888fbe3eb4783bec84de5d44d8ae7b84, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/account.php on line 6
+[08-Feb-2022 17:51:46 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/account.php on line 6
+[08-Feb-2022 17:51:46 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_888fbe3eb4783bec84de5d44d8ae7b84, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/login.php on line 3
+[08-Feb-2022 17:51:46 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/login.php on line 3

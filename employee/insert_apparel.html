@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../product.css">
+    <link rel="stylesheet" href="../login.css">
+    <title>citycentral.com</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+</head>
+    <body>
+            <style>
+                body{
+                    font-size:20px;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                }
+                a{
+                    text-decoration;
+                    color:grey;
+                }
+                a:hover{
+                    text-decoration;
+                    color: #953636;
+                    transition:1s;
+                }
+                button{
+                    dont-size:16px;
+                }
+                .phpcode{
+                    padding:12px;
+                    }
+            </style>
+        <div id="log-in">
+            
+        <!--passes input to insert_apparel.php-->
+        <form action="insert_apparel.php" method="post">
+            <div class="log-in">
+                <h1><center>EMPLOYEE INSERT APPAREL SYSTEM</center></h1>
+                <h2><center>Please enter the following:</center></h2>
+                <div>
+                    <!--input for invertoryID-->
+                    <input type="text" placeholder="Inventory ID" name="apparel_id" />
+                </div>
+                <div>
+                    <!--input for name-->
+                    <input type="text" placeholder="Name" name="apparel_name" />
+                </div>
+                <div>
+                    <!--input for description-->
+                    <input type="text" placeholder="Description" name="apparel_desc" />
+                </div>
+                <div>
+                    <!--input for quantity-->
+                    <input type="text" placeholder="Quantity" name="apparel_qty" />
+                </div>
+                <div>
+                    <!--input for type-->
+                    <input type="text" placeholder="Type" name="apparel_type" />
+                </div>
+                <div>
+                    <!--input for link to product-->
+                    <input type="text" placeholder="Link" name="apparel_link" />
+                </div>
+                <div>
+                    <!--input for price-->
+                    <input type="text" placeholder="Price" name="apparel_price" />
+                </div>
+                <div>
+                    <!--submit inputs-->
+                    <input type="submit" value="INSERT" name="submit" id="button_submit" /> <input type="reset" value="CLEAR" />
+                </div>
+            </div>
+            </div>
+        </form>
+    </body>
+</html>
