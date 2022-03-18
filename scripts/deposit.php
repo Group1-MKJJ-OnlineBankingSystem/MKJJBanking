@@ -26,6 +26,21 @@
 	$results->free();
 	
 	
+	if (!$deposit || !$acctNum){
+	    $_SESSION['registration_failed'] = 'invalid_input';
+	    header('Location: ../homepage.php');
+	    //closes db conection
+	    $db->close();
+	    exit();
+	}
+	
+	//adds slashes for any quotes in inputs
+	if (!get_magic_quotes_gpc()) {
+        $acctNum = addslashes($acctNum);
+        $deposit = addslashes($deposit);
+	}
+	
+	
     $newBalance = doubleval($currentBalance) + doubleval($deposit);
     $sql = "UPDATE ACCOUNTS SET balance='$newBalance' WHERE bankAccountNumber='$acctNum' AND ownerID='$cID'";
     $results = $db->query($sql);
