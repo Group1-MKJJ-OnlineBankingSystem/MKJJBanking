@@ -41,7 +41,7 @@
 	}
 	
 	
-    $newBalance = doubleval($currentBalance) + doubleval($deposit);
+    $newBalance = round(doubleval($currentBalance) + doubleval($deposit),2);
     $sql = "UPDATE ACCOUNTS SET balance='$newBalance' WHERE bankAccountNumber='$acctNum' AND ownerID='$cID'";
     $results = $db->query($sql);
     if ($acctOwner != $cID){
