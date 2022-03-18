@@ -122,7 +122,7 @@
                 <option value="checking">Checking</option>
             </select>
             
-            <p><label for="initalDeposit"><b>Inital Deposit: </b></label>
+            <p><label for="initalDeposit"><b>Inital Deposit: $</b></label>
             <input type="number" min="0" step="0.01" placeholder="Enter deposit amount" name="initDeposit" required></p>
         
             <button type="submit" class="btn">Create Account</button>
@@ -135,10 +135,11 @@
             <form action='./scripts/deposit.php' method='post' class="form-container">
             <h1>Deposit</h1>
         
-            <p><label for="deposit"><b>Deposit: </b></label>
+            <p><label for="deposit"><b>Deposit: $</b></label>
             <input type="number" min="0" step="0.01" placeholder="Enter deposit amount" name="deposit" required></p>
             <p><label for="account_num"><b>Account Number: </b></label>
-            <input type="number" min="0" required pattern="[0-9]{11}" placeholder="Enter account number" name="account_num" required></p>
+            <input type="number" min="400000000000" max="499999999999" placeholder="Ex: 444444444444" name="account_num" required required oninvalid="this.setCustomValidity('Invalid Bank Account Number')"
+  oninput="this.setCustomValidity('')"/></p>
             
             <button type="submit" class="btn">Confirm Deposit</button>
             <button type="button" class="btn cancel" onclick="closeDepositForm()">Cancel</button>
@@ -150,10 +151,11 @@
             <form action='./scripts/withdrawal.php' method='post' class="form-container">
             <h1>Withdrawal</h1>
         
-            <p><label for="withdrawal"><b>Withdrawal: </b></label>
+            <p><label for="withdrawal"><b>Withdrawal: $</b></label>
             <input type="number" min="0" step="0.01" placeholder="Enter withdrawal amount" name="withdrawal" required></p>
             <p><label for="account_num"><b>Account Number: </b></label>
-            <input type="number" min="0" required pattern="[0-9]{11}" placeholder="Enter account number" name="account_num" required></p>
+            <input type="number" min="400000000000" max="499999999999" placeholder="Ex: 444444444444" name="account_num" required oninvalid="this.setCustomValidity('Invalid Bank Account Number')"
+  oninput="this.setCustomValidity('')"/> </p>
         
             <button type="submit" class="btn">Confirm Withdrawal</button>
             <button type="button" class="btn cancel" onclick="closeWithdrawalForm()">Cancel</button>
