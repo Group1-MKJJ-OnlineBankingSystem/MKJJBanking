@@ -168,10 +168,6 @@
                 .form-container .cancel {
                     background-color: red;
                 }
-                div{
-                    margin: 0px 0px 10px 0px;
-                    padding:auto;
-                }
                 div2{
                     padding: 200px 200px 200px 200px;
                     margin: 25px 50px 75px 100px;
