@@ -39,7 +39,7 @@
 	
 	if (!$acctType || !$deposit) {
 	    $_SESSION['registration_failed'] = 'invalid_input';
-	    header('Location: ../register.php');
+	    header('Location: ../homepage.php');
 	    
 	    //closes db conection
 	    $db->close();
