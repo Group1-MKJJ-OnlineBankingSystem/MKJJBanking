@@ -45,7 +45,7 @@
     $sql = "UPDATE ACCOUNTS SET balance='$newBalance' WHERE bankAccountNumber='$acctNum' AND ownerID='$cID'";
     $results = $db->query($sql);
     if ($acctOwner != $cID){
-	   $_SESSION['deposit_failed'] = 'doesntOwnAcct';
+	   $_SESSION['transaction_failed'] = 'doesntOwnAcct';
 	   header('Location: ../homepage.php');
 	   exit(); 
 	}

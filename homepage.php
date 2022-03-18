@@ -19,7 +19,11 @@
         $notice = 'Deposit was Successful';
         $_SESSION['depositSuccess'] = '';
     } 
-    else if ($_SESSION['deposit_failed'] == 'doesntOwnAcct'){
+    else if ($_SESSION['withdrawalSuccess'] == 'successful'){
+        $notice = 'Withdrawal was Successful';
+        $_SESSION['withdrawalSuccess'] = '';
+    } 
+    else if ($_SESSION['transaction_failed'] == 'doesntOwnAcct'){
         $notice = 'That Account Does Not Belong to You or Does Not Exist';
         $_SESSION['deposit_failed'] = '';
     }
