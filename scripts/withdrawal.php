@@ -40,17 +40,23 @@
         $withdrawal = addslashes($withdrawal);
 	}
 	
-	
-    $newBalance = round(doubleval($currentBalance) - doubleval($withdrawal),2);
+	if ($currentBalance >= $withdrawal){
+        $newBalance = round(doubleval($currentBalance) - doubleval($withdrawal),2);
+	}
+	else{
+	   $_SESSION['transaction_failed'] = 'insufficentBalance';
+	   header('Location: ../homepage.php');
+	   exit();
+	}
     $sql = "UPDATE ACCOUNTS SET balance='$newBalance' WHERE bankAccountNumber='$acctNum' AND ownerID='$cID'";
     $results = $db->query($sql);
     if ($acctOwner != $cID){
-	   $_SESSION['deposit_failed'] = 'doesntOwnAcct';
+	   $_SESSION['transaction_failed'] = 'doesntOwnAcct';
 	   header('Location: ../homepage.php');
 	   exit(); 
 	}
     else if ($results) {
-	    $_SESSION['depositSuccess'] = 'successful';
+	    $_SESSION['withdrawalSuccess'] = 'successful';
 	    header('Location: ../homepage.php');
 	    exit();
 	}

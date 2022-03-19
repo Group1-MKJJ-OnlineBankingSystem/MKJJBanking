@@ -25,7 +25,11 @@
     } 
     else if ($_SESSION['transaction_failed'] == 'doesntOwnAcct'){
         $notice = 'That Account Does Not Belong to You or Does Not Exist';
-        $_SESSION['deposit_failed'] = '';
+        $_SESSION['transaction_failed'] = '';
+    }
+    else if ($_SESSION['transaction_failed'] == 'insufficentBalance'){
+        $notice = 'Insufficent Balance';
+        $_SESSION['transaction_failed'] = '';
     }
     
     //closes connection
