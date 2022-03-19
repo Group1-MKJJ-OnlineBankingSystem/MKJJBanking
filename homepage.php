@@ -25,7 +25,11 @@
     } 
     else if ($_SESSION['transaction_failed'] == 'doesntOwnAcct'){
         $notice = 'That Account Does Not Belong to You or Does Not Exist';
-        $_SESSION['deposit_failed'] = '';
+        $_SESSION['transaction_failed'] = '';
+    }
+    else if ($_SESSION['transaction_failed'] == 'insufficentBalance'){
+        $notice = 'Insufficent Balance';
+        $_SESSION['transaction_failed'] = '';
     }
     
     //closes connection
@@ -99,7 +103,7 @@
                 <center><div style='color: red;'><?php echo $notice; ?></div></center>
             </nav>
     <hr> 
-        <div>
+        <div class="section-wrapper">
             <h2>Bank Accounts</h2>
             <button class="mkjj-button" onclick="openBankAccountForm()">Create New Bank Account</button>
             <h3>My Bank accounts:</h3>
@@ -108,7 +112,7 @@
             </div>
         </div>
     <hr> 
-        <div>
+        <div class="section-wrapper">
             <h2>Deposits and Withdrawals</h2>
             <button class="mkjj-button" onclick="openDepositForm()">Deposit</button>
             <button class="mkjj-button" onclick="openWithdrawalForm()">Withdrawal</button>
