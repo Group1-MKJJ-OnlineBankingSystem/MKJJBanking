@@ -5,34 +5,39 @@
     //gets session info
     session_start();
     
+    
     $withdrawal = trim($_POST['withdrawal']);
     $acctNum = trim($_POST['account_num']);
     
-    
-    
-    $query = "SELECT * FROM CUSTOMER WHERE cUsername = '".$_SESSION['user']."'";
-    //gets info from db
-    $results = $db->query($query);
-    $row = $results->fetch_assoc();
-	$cID = $row['customerID'];
-	
-	$results->free();
-	
-	$query = "SELECT * FROM ACCOUNTS WHERE bankAccountNumber = '$acctNum'";
-	$results = $db->query($query);
-	$row = $results->fetch_assoc();
-	$currentBalance = $row['balance'];
-	$acctOwner = $row['ownerID'];
-	$results->free();
-	
-	
-	if (!$withdrawal || !$acctNum){
+    if (!$withdrawal || !$acctNum){
 	    $_SESSION['registration_failed'] = 'invalid_input';
 	    header('Location: ../homepage.php');
 	    //closes db conection
 	    $db->close();
 	    exit();
 	}
+    
+    $query = "SELECT * FROM CUSTOMER WHERE cUsername = '".$_SESSION['user']."'";
+    //gets info from db
+    $results = $db->query($query);
+    $row = $results->fetch_assoc();
+	$cID = $row['customerID'];
+	$results->free();
+	
+	$query = "SELECT * FROM ACCOUNTS WHERE bankAccountNumber = '$acctNum'";
+	$results = $db->query($query);
+	$row = $results->fetch_assoc();
+	if (!$row){
+	   $_SESSION['transaction_failed'] = 'doesntOwnAcct';
+	   header('Location: ../homepage.php');
+	   exit();
+	}
+	
+	$currentBalance = $row['balance'];
+	$acctOwner = $row['ownerID'];
+	$results->free();
+	
+	
 	
 	//adds slashes for any quotes in inputs
 	if (!get_magic_quotes_gpc()) {
