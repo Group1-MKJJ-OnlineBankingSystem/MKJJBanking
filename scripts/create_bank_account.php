@@ -10,7 +10,7 @@
     $deposit = trim($_POST['initDeposit']);
     date_default_timezone_set("America/New_York");
     $date = date("Y/m/d");
-    
+
     $query = "SELECT * FROM CUSTOMER WHERE cUsername = '".$_SESSION['user']."'";
     //gets info from db
     $results = $db->query($query);
@@ -35,9 +35,11 @@
         }
 	}
 	
+	if (!$deposit){
+	    $deposit = 0.0;
+	}
 	
-	
-	if (!$acctType || !$deposit) {
+	if (!$acctType) {
 	    $_SESSION['registration_failed'] = 'invalid_input';
 	    header('Location: ../homepage.php');
 	    
@@ -55,9 +57,9 @@
     $deposit = doubleval($deposit);
     
 	//creates insert query for db with user info
-    $query = "INSERT INTO ACCOUNTS VALUES
-	('".$bankAcctNum."', '".$acctType."', '".$deposit."', '".$cID."', '".$date."')";
-	
+
+    $query = "INSERT INTO ACCOUNTS VALUES ('".$bankAcctNum."', '".$acctType."', '".$deposit."', '".$cID."', '".$date."')";
+
 	//tries to insert user info into db
 	$results = $db->query($query);
 	
