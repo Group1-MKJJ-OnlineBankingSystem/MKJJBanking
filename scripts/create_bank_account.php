@@ -10,6 +10,7 @@
     $deposit = trim($_POST['initDeposit']);
     date_default_timezone_set("America/New_York");
     $date = date("Y/m/d");
+    $transactionType = "initial deposit";
 
     $query = "SELECT * FROM CUSTOMER WHERE cUsername = '".$_SESSION['user']."'";
     //gets info from db
@@ -34,6 +35,22 @@
             $i=0;
         }
 	}
+	
+	$query = 'SELECT transactionID FROM TRANSACTIONS';
+	$results = $db->query($query);
+	$transactionid = mt_rand(10000000000, 20000000000);
+	
+	for ($i = 0; $i < $num_results; $i++) {
+        $row = $results->fetch_assoc();
+        
+        //compares current ids with new ids
+        if ($transactionid == $row['transactionID']){
+            //creates a new random id if there is a match
+            $transactionid = mt_rand(10000000000, 20000000000);
+            $i=0;
+        }
+	}
+	
 	
 	if (!$deposit){
 	    $deposit = 0.0;
@@ -67,6 +84,13 @@
 	if ($results) {
 	    $sql = "UPDATE CUSTOMER SET numOfAccounts='$numAccounts' WHERE customerID='$cID'";
 	    $results2 = $db->query($sql);
+	    
+	    $query = "INSERT INTO TRANSACTIONS VALUES
+	('".$date."', '".$transactionType."', '".$deposit."', '".$bankAcctNum."', '".$transactionid."')";
+	
+	//tries to insert user info into db
+	$transactionResults = $db->query($query);
+	    
 	    
 	    $_SESSION['acctCreationDone'] = 'done';
 	    header('Location: ../homepage.php');
