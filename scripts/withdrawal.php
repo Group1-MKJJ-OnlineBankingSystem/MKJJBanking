@@ -9,7 +9,7 @@
     $withdrawal = trim($_POST['withdrawal']);
     $acctNum = intval(trim($_POST['account_num']));
     date_default_timezone_set("America/New_York");
-    $date = date("Y/m/d h:i:s");
+    $date = date("Y/m/d H:i:s");
     $transactionType = "withdrawal";
     
     if (!$withdrawal || !$acctNum){

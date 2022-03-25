@@ -10,7 +10,7 @@
     $deposit = trim($_POST['initDeposit']);
     date_default_timezone_set("America/New_York");
     $date = date("Y/m/d");
-    $transactionDate = date("Y/m/d h:i:s");
+    $transactionDate = date("Y/m/d H:i:s");
     $transactionType = "initial deposit";
 
     $query = "SELECT * FROM CUSTOMER WHERE cUsername = '".$_SESSION['user']."'";

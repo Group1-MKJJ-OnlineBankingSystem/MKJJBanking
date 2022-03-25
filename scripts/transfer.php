@@ -9,8 +9,8 @@
     $senderAcctNum = intval(trim($_POST['sender_account_num']));
     $receiverAcctNum = trim($_POST['receiver_account_num']);
     date_default_timezone_set("America/New_York");
-    $sDate = date("Y/m/d h:i:s");
-    $rDate = date("Y/m/d h:i:s");
+    $sDate = date("Y/m/d H:i:s");
+    $rDate = date("Y/m/d H:i:s");
     $rTransactionType = "transfer received";
     $sTransactionType = "transfer sent";
     
