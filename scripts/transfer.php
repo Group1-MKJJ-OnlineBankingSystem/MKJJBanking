@@ -6,7 +6,7 @@
     session_start();
     
     $transfer = trim($_POST['transfer']);
-    $senderAcctNum = trim($_POST['sender_account_num']);
+    $senderAcctNum = intval(trim($_POST['sender_account_num']));
     $receiverAcctNum = trim($_POST['receiver_account_num']);
     date_default_timezone_set("America/New_York");
     $sDate = date("Y/m/d h:i:s");
@@ -125,24 +125,6 @@
 	    header('Location: ../homepage.php');
 	    exit();
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
     //closes db connection
     $db->close();

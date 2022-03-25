@@ -70,6 +70,9 @@
     
 </head>
     <body>
+        <?php
+        $acctsList = array();
+        ?>
         <ul>
             <li><a class="active" href="./homepage.php">Home</a></li>
             <form action="search_apparel.php" method="post">
@@ -138,6 +141,7 @@
                         } else {
                             echo "<div class=\"account-card\">";
                             echo 'Bank Account Number: '.$row['bankAccountNumber'].'<br>';
+                            $acctsList[] = $row['bankAccountNumber'];
                             echo 'Account Type: '.$row['accountType'].'<br>';
                             echo 'Balance: $'.$row['balance'].'<br>';
                             echo '<br>';
@@ -146,6 +150,7 @@
                                 $row = $results->fetch_assoc();
                                 echo "<div class=\"account-card\">";
                                 echo 'Bank Account Number: '.$row['bankAccountNumber'].'<br>';
+                                $acctsList[] = $row['bankAccountNumber'];
                                 echo 'Account Type: '.$row['accountType'].'<br>';
                                 echo 'Balance: $'.$row['balance'].'<br>';
                                 echo '<br>';
@@ -194,8 +199,15 @@
             <p><label for="deposit"><b>Deposit: $</b></label>
             <input type="number" min="0.01" step="0.01" placeholder="Enter deposit amount" name="deposit" required></p>
             <p><label for="account_num"><b>Account Number: </b></label>
-            <input type="acctNumber" pattern="4+[0-9]{11}" title="A valid account number starts with a 4 that is followed by 11 more digits. Ex: 412345678901" placeholder="Ex: 444444444444" name="account_num" required></p>
-            
+            <!--<input type="acctNumber" pattern="4+[0-9]{11}" title="A valid account number starts with a 4 that is followed by 11 more digits. Ex: 412345678901" placeholder="Ex: 444444444444" name="account_num" required></p>-->
+            <select name="account_num" id="bankAcctNum">
+                <?php
+                    for($k=0; $k < $numOfAccounts; $k++){
+                    echo '<option value="'.$acctsList[$k].'">'.$acctsList[$k].'</option>';
+                    }
+                ?>
+            </select>
+            </p>
             <button type="submit" class="btn">Confirm Deposit</button>
             <button type="button" class="btn cancel" onclick="closeDepositForm()">Cancel</button>
             
@@ -209,8 +221,15 @@
             <p><label for="withdrawal"><b>Withdrawal: $</b></label>
             <input type="number" min="0.01" step="0.01" placeholder="Enter withdrawal amount" name="withdrawal" required></p>
             <p><label for="account_num"><b>Account Number: </b></label>
-            <input type="acctNumber" pattern="4+[0-9]{11}" title="A valid account number starts with a 4 that is followed by 11 more digits. Ex: 412345678901" placeholder="Ex: 444444444444" name="account_num" required></p>
-
+            <!--<input type="acctNumber" pattern="4+[0-9]{11}" title="A valid account number starts with a 4 that is followed by 11 more digits. Ex: 412345678901" placeholder="Ex: 444444444444" name="account_num" required></p>-->
+            <select name="account_num" id="bankAcctNum">
+                <?php
+                    for($k=0; $k < $numOfAccounts; $k++){
+                    echo '<option value="'.$acctsList[$k].'">'.$acctsList[$k].'</option>';
+                    }
+                ?>
+            </select>
+            </p>
             <button type="submit" class="btn">Confirm Withdrawal</button>
             <button type="button" class="btn cancel" onclick="closeWithdrawalForm()">Cancel</button>
             
@@ -224,7 +243,15 @@
             <p><label for="transfer"><b>Transfer: $</b></label>
             <input type="number" min="0.01" step="0.01" placeholder="Enter transfer amount" name="transfer" required></p>
             <p><label for="account_num"><b>Your Account Number: </b></label>
-            <input type="acctNumber" pattern="4+[0-9]{11}" title="A valid account number starts with a 4 that is followed by 11 more digits. Ex: 412345678901" placeholder="Ex: 444444444444" name="sender_account_num" required> </p>
+            <!--<input type="acctNumber" pattern="4+[0-9]{11}" title="A valid account number starts with a 4 that is followed by 11 more digits. Ex: 412345678901" placeholder="Ex: 444444444444" name="sender_account_num" required> </p>-->
+            <select name="sender_account_num" id="bankAcctNum">
+                <?php
+                    for($k=0; $k < $numOfAccounts; $k++){
+                    echo '<option value="'.$acctsList[$k].'">'.$acctsList[$k].'</option>';
+                    }
+                ?>
+            </select>
+            </p>
             <p><label for="receiver_num"><b>Receiver Account Number: </b></label>
             <input type="acctNumber" pattern="4+[0-9]{11}" title="A valid account number starts with a 4 that is followed by 11 more digits. Ex: 412345678901" placeholder="Ex: 444444444444" name="receiver_account_num" required> </p>
             <button type="submit" class="btn">Confirm Transfer</button>
