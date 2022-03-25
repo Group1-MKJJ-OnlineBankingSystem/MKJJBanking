@@ -6,9 +6,14 @@
     session_start();
     
     if ($_SESSION['registration_failed'] == 'randerr') {
-            $notice = 'An error has occurred. Please try again.';
+        $notice = 'An error has occurred. Please try again.';
             
-            $_SESSION['registration_failed'] = '';
+        $_SESSION['registration_failed'] = '';
+    }
+    else if ($_SESSION['registration_failed'] == 'invalid_input') {
+        $notice = 'Missing input. Please try again.';
+            
+        $_SESSION['registration_failed'] = '';
     }
     else if($_SESSION['acctCreationDone'] == 'done'){
         $notice = 'Account Successfully Created.';
@@ -23,6 +28,10 @@
         $notice = 'Withdrawal was Successful';
         $_SESSION['withdrawalSuccess'] = '';
     } 
+    else if ($_SESSION['transferSuccess'] == 'successful'){
+        $notice = 'Transfer was Successful';
+        $_SESSION['transferSuccess'] = '';
+    } 
     else if ($_SESSION['transaction_failed'] == 'doesntOwnAcct'){
         $notice = 'That Account Does Not Belong to You or Does Not Exist';
         $_SESSION['transaction_failed'] = '';
@@ -31,6 +40,19 @@
         $notice = 'Insufficent Balance';
         $_SESSION['transaction_failed'] = '';
     }
+    
+    $query = "SELECT * FROM `ACCOUNTS`as a, `CUSTOMER` as c WHERE c.customerID = a.ownerID AND c.cUsername = '".$_SESSION['user']."'";
+    //gets info from db
+    $results = $db->query($query);
+    $row = $results->fetch_assoc();
+    $num_results = $result->num_rows;
+                    
+    //creates variables from queried values
+    $user = $row['cUsername'];
+    $bankno = $row['bankAccountNumber'];
+    $accountType = $row['accountType'];
+    $balance = $row['balance'];
+    $numOfAccounts = $row['numOfAccounts'];
     
     //closes connection
     $db->close();
@@ -45,6 +67,7 @@
     <link rel="stylesheet" href="./style.css">
     <title>MKJJ</title>
     <link rel="icon" type="image/x-icon" href="assets/icon_draft1.png">
+    
 </head>
     <body>
         <ul>
@@ -68,8 +91,8 @@
                 .form-popup {
                     display: none;
                     position: fixed;
-                    bottom: 10px;
-                    right: 10px;
+                    bottom: 25px;
+                    right: 25px;
                     border: 5px solid #000000;
                     z-index: 9;
                     
@@ -99,7 +122,7 @@
             </div>
         </div>
             <nav class="heading">
-                <h1><center>Dashboard</center></h1>
+                <h1><center>Hello,<?php echo " ".$_SESSION['user']; ?> </center></h1>
                 <center><div style='color: red;'><?php echo $notice; ?></div></center>
             </nav>
     <hr> 
@@ -108,7 +131,29 @@
             <button class="mkjj-button" onclick="openBankAccountForm()">Create New Bank Account</button>
             <h3>My Bank accounts:</h3>
             <div>
-                Bank account listing will go here.
+                <div>
+                    <?php
+                        if($numOfAccounts == 0){
+                            echo "No open accounts.";
+                        } else {
+                            echo "<div class=\"account-card\">";
+                            echo 'Bank Account Number: '.$row['bankAccountNumber'].'<br>';
+                            echo 'Account Type: '.$row['accountType'].'<br>';
+                            echo 'Balance: $'.$row['balance'].'<br>';
+                            echo '<br>';
+                            echo "</div>";
+                            for($i = 1; $i < $numOfAccounts; $i++){
+                                $row = $results->fetch_assoc();
+                                echo "<div class=\"account-card\">";
+                                echo 'Bank Account Number: '.$row['bankAccountNumber'].'<br>';
+                                echo 'Account Type: '.$row['accountType'].'<br>';
+                                echo 'Balance: $'.$row['balance'].'<br>';
+                                echo '<br>';
+                                echo "</div>";
+                            }
+                        }
+                    ?>
+                </div>
             </div>
         </div>
     <hr> 
@@ -116,8 +161,11 @@
             <h2>Deposits and Withdrawals</h2>
             <button class="mkjj-button" onclick="openDepositForm()">Deposit</button>
             <button class="mkjj-button" onclick="openWithdrawalForm()">Withdrawal</button>
+            <button class="mkjj-button" onclick="openTransferForm()">Transfer</button>
         </div>
     <hr>
+    
+    <!--FORMS ---------------------------------------------------------------------------------------------------------------------------------------------------------->
     
         <div1 class="form-popup" id="bankAccountForm">
             
@@ -131,7 +179,7 @@
             </select>
             
             <p><label for="initalDeposit"><b>Inital Deposit: $</b></label>
-            <input type="number" min="0" step="0.01" placeholder="Enter deposit amount" name="initDeposit" required></p>
+            <input type="number" min="0.0" step="0.01" placeholder="Enter deposit amount" name="initDeposit" required></p>
         
             <button type="submit" class="btn">Create Account</button>
             <button type="button" class="btn cancel" onclick="closeBankAccountForm()">Cancel</button>
@@ -144,10 +192,9 @@
             <h1>Deposit</h1>
         
             <p><label for="deposit"><b>Deposit: $</b></label>
-            <input type="number" min="0" step="0.01" placeholder="Enter deposit amount" name="deposit" required></p>
+            <input type="number" min="0.01" step="0.01" placeholder="Enter deposit amount" name="deposit" required></p>
             <p><label for="account_num"><b>Account Number: </b></label>
-            <input type="number" min="400000000000" max="499999999999" placeholder="Ex: 444444444444" name="account_num" required required oninvalid="this.setCustomValidity('Invalid Bank Account Number')"
-  oninput="this.setCustomValidity('')"/></p>
+            <input type="acctNumber" pattern="4+[0-9]{11}" title="A valid account number starts with a 4 that is followed by 11 more digits. Ex: 412345678901" placeholder="Ex: 444444444444" name="account_num" required></p>
             
             <button type="submit" class="btn">Confirm Deposit</button>
             <button type="button" class="btn cancel" onclick="closeDepositForm()">Cancel</button>
@@ -160,22 +207,38 @@
             <h1>Withdrawal</h1>
         
             <p><label for="withdrawal"><b>Withdrawal: $</b></label>
-            <input type="number" min="0" step="0.01" placeholder="Enter withdrawal amount" name="withdrawal" required></p>
+            <input type="number" min="0.01" step="0.01" placeholder="Enter withdrawal amount" name="withdrawal" required></p>
             <p><label for="account_num"><b>Account Number: </b></label>
-            <input type="number" min="400000000000" max="499999999999" placeholder="Ex: 444444444444" name="account_num" required oninvalid="this.setCustomValidity('Invalid Bank Account Number')"
-  oninput="this.setCustomValidity('')"/> </p>
-        
+            <input type="acctNumber" pattern="4+[0-9]{11}" title="A valid account number starts with a 4 that is followed by 11 more digits. Ex: 412345678901" placeholder="Ex: 444444444444" name="account_num" required></p>
+
             <button type="submit" class="btn">Confirm Withdrawal</button>
             <button type="button" class="btn cancel" onclick="closeWithdrawalForm()">Cancel</button>
             
           </form>
         </div3>
         
+        <div4 class="form-popup" id="transferForm">
+            <form action='./scripts/transfer.php' method='post' class="form-container">
+            <h1>Transfer</h1>
+        
+            <p><label for="transfer"><b>Transfer: $</b></label>
+            <input type="number" min="0.01" step="0.01" placeholder="Enter transfer amount" name="transfer" required></p>
+            <p><label for="account_num"><b>Your Account Number: </b></label>
+            <input type="acctNumber" pattern="4+[0-9]{11}" title="A valid account number starts with a 4 that is followed by 11 more digits. Ex: 412345678901" placeholder="Ex: 444444444444" name="sender_account_num" required> </p>
+            <p><label for="receiver_num"><b>Receiver Account Number: </b></label>
+            <input type="acctNumber" pattern="4+[0-9]{11}" title="A valid account number starts with a 4 that is followed by 11 more digits. Ex: 412345678901" placeholder="Ex: 444444444444" name="receiver_account_num" required> </p>
+            <button type="submit" class="btn">Confirm Transfer</button>
+            <button type="button" class="btn cancel" onclick="closeTransferForm()">Cancel</button>
+            
+          </form>
+        </div4>
+        
          <script>
             function openBankAccountForm() {
               document.getElementById("bankAccountForm").style.display = "block";
               document.getElementById("depositForm").style.display = "none";
               document.getElementById("withdrawalForm").style.display = "none";
+              document.getElementById("transferForm").style.display = "none";
             }
             
             function closeBankAccountForm() {
@@ -185,6 +248,7 @@
               document.getElementById("depositForm").style.display = "block";
               document.getElementById("bankAccountForm").style.display = "none";
               document.getElementById("withdrawalForm").style.display = "none";
+              document.getElementById("transferForm").style.display = "none";
             }
             
             function closeDepositForm() {
@@ -194,11 +258,29 @@
               document.getElementById("withdrawalForm").style.display = "block";
               document.getElementById("depositForm").style.display = "none";
               document.getElementById("bankAccountForm").style.display = "none"
+              document.getElementById("transferForm").style.display = "none";
             }
             
             function closeWithdrawalForm() {
               document.getElementById("withdrawalForm").style.display = "none";
             }
+            function openTransferForm(){
+              document.getElementById("transferForm").style.display = "block";
+              document.getElementById("depositForm").style.display = "none";
+              document.getElementById("bankAccountForm").style.display = "none"
+              document.getElementById("withdrawalForm").style.display = "none"
+            }
+            function closeTransferForm() {
+              document.getElementById("transferForm").style.display = "none";
+            }
         </script>
     </body>
 </html>
+
+
+
+
+
+
+
+
