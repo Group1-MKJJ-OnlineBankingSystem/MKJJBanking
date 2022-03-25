@@ -10,6 +10,7 @@
     $deposit = trim($_POST['initDeposit']);
     date_default_timezone_set("America/New_York");
     $date = date("Y/m/d");
+    $transactionDate = date("Y/m/d h:i:s");
     $transactionType = "initial deposit";
 
     $query = "SELECT * FROM CUSTOMER WHERE cUsername = '".$_SESSION['user']."'";
@@ -86,7 +87,7 @@
 	    $results2 = $db->query($sql);
 	    
 	    $query = "INSERT INTO TRANSACTIONS VALUES
-	('".$date."', '".$transactionType."', '".$deposit."', '".$bankAcctNum."', '".$transactionid."')";
+	('".$transactionDate."', '".$transactionType."', '".$deposit."', '".$bankAcctNum."', '".$transactionid."')";
 	
 	//tries to insert user info into db
 	$transactionResults = $db->query($query);
