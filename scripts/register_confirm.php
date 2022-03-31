@@ -10,15 +10,18 @@
     $pass = trim($_POST['pass']);
     $conpass = trim($_POST['conpass']);
     $email = trim($_POST['email']);
+    $phone_num = trim($_POST['phone_num']);
     $fname = trim($_POST['fname']);
 	$lname = trim($_POST['lname']);
 	$stadd = trim($_POST['stadd']);
 	$city = trim($_POST['city']);
 	$state = trim($_POST['state']);
 	$zip = trim($_POST['zip']);
+	$numAccts = (int)0;
+	//$numTransactions = (int)0;
 	
 	//checks if all inputs have been passed
-	if (!$user || !$pass || !$conpass || !$fname || !$lname || !$email || !$stadd || !$city || !$state || !$zip) {
+	if (!$user || !$pass || !$conpass || !$fname || !$lname || !$email || !$stadd || !$city || !$state || !$zip || !$phone_num) {
 	    $_SESSION['registration_failed'] = 'invalid_input';
 	    header('Location: ../register.php');
 	    
@@ -48,7 +51,7 @@
 	}
 	
     //gets id and username from current customers
-    $query = 'SELECT customerID, cUsername, cEmail FROM CUSTOMER';
+    $query = 'SELECT customerID, cUsername, cEmail, phoneNumber FROM CUSTOMER';
 	$results = $db->query($query);
 	
 	//gets the number of results
@@ -64,6 +67,7 @@
         $fname = addslashes($fname);
         $lname = addslashes($lname);
         $email = addslashes($email);
+        $phone_num = addslashes($phone_num);
         $city = addslashes($city);
 	}
 	
@@ -78,9 +82,11 @@
         $row = $results->fetch_assoc();
         
         //compares current ids with new ids
-        if ($custid == $row['customerID'])
+        if ($custid == $row['customerID']){
             //creates a new random id if there is a match
             $custid = mt_rand(100000, 999999);
+            $i = 0;
+        }
         
         //compares current usernames with new username    
         if ($user == $row['username']) {
@@ -104,14 +110,24 @@
 	        $db->close();
             exit();
         }
+        if ($phone_num == $row['phoneNumber']) {
+            //exits program is there is a match
+            $_SESSION['registration_failed'] = 'phonenumbertaken';
+            header('Location: ../register.php');
+            
+            //closes db conection
+            $results->free();
+	        $db->close();
+            exit();
+        }
     }
     
     //converts customer id into string
     $custid = strval($custid);
 	
 	//creates insert query for db with user info
-	$query = "INSERT INTO CUSTOMER VALUES 
-	('".$custid."', '".$user."', '".$pass."', '".$email."', '".$fname."', '".$lname."', '".$address."')";
+	$query = "INSERT INTO CUSTOMER VALUES
+	('".$custid."', '".$user."', '".$pass."', '".$email."', '".$fname."', '".$lname."', '".$address."', '".$phone_num."', '".$numAccts."')";
 	
 	//tries to insert user info into db
 	$results = $db->query($query);
@@ -119,7 +135,7 @@
 	//checks if insert was successful
 	if ($results) {
 	    $_SESSION['regdone'] = true;
-	    header('Location: ../homepage.html');
+	    header('Location: ../login.php');
 	    exit();
 	}
 	

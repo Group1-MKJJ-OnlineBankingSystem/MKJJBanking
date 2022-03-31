@@ -36,11 +36,15 @@
     $results = $db->query($query);
     $row = $results->fetch_assoc();
 	$cID = $row['customerID'];
+// 	$numTransactions = $row['numOfTransactions'];
+// 	$numTransactions = $numTransactions + 1;
 	$results->free();
 	
 	$query = "SELECT * FROM ACCOUNTS WHERE bankAccountNumber = '$acctNum'";
 	$results = $db->query($query);
 	$row = $results->fetch_assoc();
+	$numTransactions = $row['numOfTransactions'];
+	$numTransactions = $numTransactions + 1;
 	if (!$row){
 	   $_SESSION['transaction_failed'] = 'doesntOwnAcct';
 	   header('Location: ../homepage.php');
@@ -80,6 +84,11 @@
 	
 	    //tries to insert user info into db
 	    $transactionResults = $db->query($query);
+	    
+	   // $sql = "UPDATE CUSTOMER SET numOfTransactions='$numTransactions' WHERE customerID='$cID'";
+	   // $results2 = $db->query($sql);
+	   $sql = "UPDATE ACCOUNTS SET numOfTransactions='$numTransactions' WHERE ownerID='$cID' AND bankAccountNumber='$acctNum'";
+	$results2 = $db->query($sql);
         
 	    $_SESSION['withdrawalSuccess'] = 'successful';
 	    header('Location: ../homepage.php');

@@ -11,8 +11,9 @@
     $date = date("Y/m/d H:i:s");
     $transactionType = "deposit";
     
-    $query = 'SELECT transactionID FROM TRANSACTIONS';
+    $query = 'SELECT * FROM TRANSACTIONS';
 	$results = $db->query($query);
+	$row = $results->fetch_assoc();
 	$transactionid = mt_rand(10000000000, 20000000000);
 	for ($i = 0; $i < $num_results; $i++) {
         $row = $results->fetch_assoc();
@@ -28,6 +29,8 @@
     $results = $db->query($query);
     $row = $results->fetch_assoc();
 	$cID = $row['customerID'];
+// 	$numTransactions = $row['numOfTransactions'];
+// 	$numTransactions = $numTransactions + 1;
 	
 	$results->free();
 	
@@ -36,6 +39,8 @@
 	$row = $results->fetch_assoc();
 	$currentBalance = $row['balance'];
 	$acctOwner = $row['ownerID'];
+	$numTransactions = $row['numOfTransactions'];
+	$numTransactions = $numTransactions + 1;
 	$results->free();
 	
 	
@@ -69,6 +74,9 @@
 	
 	//tries to insert user info into db
 	$transactionResults = $db->query($query);
+	
+	$sql = "UPDATE ACCOUNTS SET numOfTransactions='$numTransactions' WHERE ownerID='$cID' AND bankAccountNumber='$acctNum'";
+	$results2 = $db->query($sql);
         
 	    $_SESSION['depositSuccess'] = 'successful';
 	    header('Location: ../homepage.php');

@@ -12,19 +12,25 @@
     $date = date("Y/m/d");
     $transactionDate = date("Y/m/d H:i:s");
     $transactionType = "initial deposit";
+    
 
     $query = "SELECT * FROM CUSTOMER WHERE cUsername = '".$_SESSION['user']."'";
     //gets info from db
     $results = $db->query($query);
     $row = $results->fetch_assoc();
 	$numAccounts = $row['numOfAccounts'];
+// 	$numTransactions = $row['numOfTransactions'];
 	$cID = $row['customerID'];
 	$results->free();
 	$numAccounts = $numAccounts + 1;
+// 	$numTransactions = $numTransactions + 1;
 	
-	$query = 'SELECT bankAccountNumber FROM ACCOUNTS';
+	$query = 'SELECT * FROM ACCOUNTS';
 	$results = $db->query($query);
+	$row = $results->fetch_assoc();
+// 	$numTransactions = $row['numOfTransactions'];
 	$bankAcctNum = mt_rand(400000000000, 499999999999);
+	$numTransactions = 1;
 	
 	for ($i = 0; $i < $num_results; $i++) {
         $row = $results->fetch_assoc();
@@ -76,7 +82,7 @@
     
 	//creates insert query for db with user info
 
-    $query = "INSERT INTO ACCOUNTS VALUES ('".$bankAcctNum."', '".$acctType."', '".$deposit."', '".$cID."', '".$date."')";
+    $query = "INSERT INTO ACCOUNTS VALUES ('".$bankAcctNum."', '".$acctType."', '".$deposit."', '".$cID."', '".$date."', '".$numTransactions."')";
 
 	//tries to insert user info into db
 	$results = $db->query($query);
@@ -85,6 +91,8 @@
 	if ($results) {
 	    $sql = "UPDATE CUSTOMER SET numOfAccounts='$numAccounts' WHERE customerID='$cID'";
 	    $results2 = $db->query($sql);
+	   // $sql = "UPDATE CUSTOMER SET numOfTransactions='$numTransactions' WHERE customerID='$cID'";
+	   // $results2 = $db->query($sql);
 	    
 	    $query = "INSERT INTO TRANSACTIONS VALUES
 	('".$transactionDate."', '".$transactionType."', '".$deposit."', '".$bankAcctNum."', '".$transactionid."')";

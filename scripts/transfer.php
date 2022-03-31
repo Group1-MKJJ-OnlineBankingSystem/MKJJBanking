@@ -45,7 +45,11 @@
     $results = $db->query($query);
     $row = $results->fetch_assoc();
 	$cID = $row['customerID'];
+// 	$numTransactions = $row['numOfTransactions'];
+// 	$numTransactions = $numTransactions + 1;
 	$results->free();
+	
+	
 	
 	$query = "SELECT * FROM ACCOUNTS WHERE bankAccountNumber = '$senderAcctNum' AND ownerID = '$cID'";
 	$results = $db->query($query);
@@ -57,6 +61,8 @@
 	}
 	$senderCurrentBalance = $row['balance'];
 	$senderOwnerID = $row['ownerID'];
+	$numTransactions = $row['numOfTransactions'];
+	$numTransactions = $numTransactions + 1;
 	$results->free();
 	
 	$query = "SELECT * FROM ACCOUNTS WHERE bankAccountNumber = '$receiverAcctNum'";
@@ -69,6 +75,8 @@
 	}
 	$receiverCurrentBalance = $row['balance'];
 	$receiverOwnerID = $row['ownerID'];
+	$recNumTransactions = $row['numOfTransactions'];
+	$recNumTransactions = $recNumTransactions + 1;
 	$results->free();
 	
 	
@@ -96,6 +104,9 @@
 	   exit(); 
 	}
 	
+
+	
+	
 	$sql = "UPDATE ACCOUNTS SET balance='$receiverNewBalance' WHERE bankAccountNumber='$receiverAcctNum' AND ownerID='$receiverOwnerID'";
 	$receiverResults = $db->query($sql);
 	$sql = "UPDATE ACCOUNTS SET balance='$senderNewBalance' WHERE bankAccountNumber='$senderAcctNum' AND ownerID='$senderOwnerID'";
@@ -115,6 +126,12 @@
 	
 	    //tries to insert user info into db
 	    $senderTransferResults = $db->query($query3);
+	    
+	    $sql = "UPDATE ACCOUNTS SET numOfTransactions='$numTransactions' WHERE ownerID='$cID' AND bankAccountNumber='$senderAcctNum'";
+	    $results2 = $db->query($sql);
+	    $sql2 = "UPDATE ACCOUNTS SET numOfTransactions='$recNumTransactions' WHERE ownerID='$receiverOwnerID' AND bankAccountNumber='$receiverAcctNum'";
+	    $results3 = $db->query($sql2);
+	    
         
 	    $_SESSION['transferSuccess'] = 'successful';
 	    header('Location: ../homepage.php');
