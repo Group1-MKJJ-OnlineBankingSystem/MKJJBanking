@@ -8,7 +8,7 @@
     //takes input passed from form and assigns to variables
     $acctNum = intval(trim($_POST['account_num']));
     
-    $query = "SELECT * FROM TRANSACTIONS as t, ACCOUNTS as a WHERE t.bankAccountNumber = '$acctNum' AND a.bankAccountNumber = '$acctNum'";
+    $query = "SELECT * FROM TRANSACTIONS as t, ACCOUNTS as a WHERE t.bankAccountNumber = '$acctNum' AND a.bankAccountNumber = '$acctNum' ORDER BY t.dateOfTransaction DESC";
     //gets info from db
     $results = $db->query($query);
     $row = $results->fetch_assoc();
