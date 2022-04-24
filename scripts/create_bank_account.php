@@ -5,6 +5,14 @@
     //gets session info
     session_start();
     
+    if(isset($_SESSION["loggedin"])){
+            if(time()-$_SESSION["login_time_stamp"] >600){
+                session_unset();
+                session_destroy();
+                header("Location: login.php");
+            }
+        }
+    
     //takes input passed from form and assigns to variables
     $acctType = strtolower(trim($_POST['acct']));
     $deposit = trim($_POST['initDeposit']);
@@ -12,6 +20,7 @@
     $date = date("Y/m/d");
     $transactionDate = date("Y/m/d H:i:s");
     $transactionType = "initial deposit";
+    $status = "pending approval";
     
 
     $query = "SELECT * FROM CUSTOMER WHERE cUsername = '".$_SESSION['user']."'";
@@ -82,7 +91,7 @@
     
 	//creates insert query for db with user info
 
-    $query = "INSERT INTO ACCOUNTS VALUES ('".$bankAcctNum."', '".$acctType."', '".$deposit."', '".$cID."', '".$date."', '".$numTransactions."')";
+    $query = "INSERT INTO ACCOUNTS VALUES ('".$bankAcctNum."', '".$acctType."', '".$deposit."', '".$cID."', '".$date."', '".$numTransactions."', '".$status."')";
 
 	//tries to insert user info into db
 	$results = $db->query($query);

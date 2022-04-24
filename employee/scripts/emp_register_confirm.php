@@ -51,8 +51,29 @@
     $query = 'SELECT employeeID, eUsername, eEmail FROM EMPLOYEE';
 	$results = $db->query($query);
 	
+	$queryCust = 'SELECT username FROM CUSTOMER';
+	$resultsCust = $db->query($queryCust);
+	
 	//gets the number of results
 	$num_results = $results->num_rows;
+	$num_resultsCUST = $resultsCust->num_rows;
+    
+    for ($i = 0; $i < $num_resultsCUST; $i++) {
+        $rowCust = $resultsCust->fetch_assoc();
+        
+        //compares current usernames with new username    
+        if ($user == $rowCust['username']) {
+            //exits program is there is a match
+            $_SESSION['registration_failed'] = 'usertaken';
+            header('Location: ../emp_register.php');
+            
+            //closes db conection
+            $results->free();
+	        $db->close();
+            exit();
+        }
+    }
+    
     
     //generates a 6 digit random number for employee id
     $empid = mt_rand(100000, 999999);
@@ -83,7 +104,7 @@
             $empid = mt_rand(100000, 999999);
         
         //compares current usernames with new username    
-        if ($user == $row['username']) {
+        if ($user == $row['eUsername']) {
             //exits program is there is a match
             $_SESSION['registration_failed'] = 'usertaken';
             header('Location: ../emp_register.php');
@@ -119,7 +140,7 @@
 	//checks if insert was successful
 	if ($results) {
 	    $_SESSION['regdone'] = true;
-	    header('Location: ../../homepage_employee.php');
+	    header('Location: ../emp_login.php');
 	    exit();
 	}
 	

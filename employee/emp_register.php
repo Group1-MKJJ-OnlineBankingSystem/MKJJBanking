@@ -144,7 +144,7 @@
             <!--other access links-->
             <div>
                 <center>
-                    Already have an employee account? <a class="link" href="../login.php">Log In</a> <br>
+                    Already have an employee account? <a class="link" href="../emp_login.php">Log In</a> <br>
                 </center>
             </div>
         </div>

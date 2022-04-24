@@ -1,3 +1,27 @@
+/*
+    MEDIA QUERIES FOR MOBILE RESPONSIVENESS
+*/
+
+@media only screen and (max-width: 600px) {
+  ul {
+      font-size: 8px; 
+  }
+  
+  .section-wrapper{
+      font-size:12px;
+  }
+  
+  .mkjj-button{
+      background-color: blue;
+      padding-top: 16px;
+  }
+  
+  .info{
+      text-align: left;
+  }
+  
+}
+
 /*css for homepage*/
 /*body and html*/
 body, html {
@@ -32,6 +56,10 @@ ul {
     background-color: grey;
   }
   
+  li a.admin_home {
+      background-color:blue;
+  }
+  
 /*Grey header*/
   .hero-text {
     text-align: center;
@@ -61,13 +89,31 @@ ul {
   .services-content {
     text-align: center;
   }
-    
+  
   .services-list {
     display: flex;
+    /*display: inline-block;*/
     flex-direction: column;
     list-style-type: disc;
     list-style-position: inside;
     background-color: unset;
+    padding: 0 0 0 5vw;
+  }
+  
+  .services-align{
+    width:403px;
+    margin:0;
+    text-align: left;
+    display: inline-block; 
+    position: relative;
+    
+    /*top: 51%;*/
+    /*left: 50%;*/
+    /*transform: translate(205%, -0%);*/
+  }
+  
+  .servies-li{
+      font-size: 13px;
   }
 
   .hero-wrapper{
@@ -95,6 +141,8 @@ ul {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  border-radius:12px;
+  margin-right: 5px;
 }
 .mkjj-button:hover{
   cursor: pointer;
@@ -110,7 +158,41 @@ ul {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.account-card{
+    padding:16px;
+    margin: auto;
+    text-align: center;
+    border-radius:12px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-evenly;
+}
 
+.history-card{
+    padding:16px;
+    margin: auto;
+    text-align: center;
+    border-radius:12px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.account-card:hover{
+    background: LightSkyBlue;
+}
+
+.vl {
+    border-left: 2px solid black;
+    height: auto;
+}
+
+.card-info {
+    width: 33%;
+    padding: 0 2vw;
+}
 /*delete below lines, unneeded for this project*/
 
 /*
@@ -120,7 +202,7 @@ CARD CSS BELOW
    /*Float four columns side by side */
 .column {
   float: left;
-  width: 50%;
+  width: 33%;
   padding:1rem;
 }
 
@@ -137,12 +219,50 @@ CARD CSS BELOW
   clear: both;
 }
 
+.index-img {
+    width:100%;
+    height:55vh;
+}
+
  /*Responsive columns */
+@media screen and (max-width: 1200px) {
+    .index-img {
+        height:45vh;
+    }
+}
+ 
+@media screen and (max-width: 900px) {
+    .column {
+        width: 45%;
+    }
+    .index-img {
+        height:40vh;
+    }
+    .row {
+      flex-wrap:wrap;
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+    .column {
+        width: 44%;
+    }
+    
+}
+
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
     display: block;
     margin-bottom: 20px;
+    padding: 0;
+  }
+  .row {
+      flex-direction:column;
+  }
+  .index-img {
+      width: 100%;
   }
 }
 

@@ -5,6 +5,13 @@
     //gets session info
     session_start();
     
+    if(isset($_SESSION["loggedin"])){
+            if(time()-$_SESSION["login_time_stamp"] >600){
+                session_unset();
+                session_destroy();
+                header("Location: login.php");
+            }
+        }
     
     $withdrawal = trim($_POST['withdrawal']);
     $acctNum = intval(trim($_POST['account_num']));

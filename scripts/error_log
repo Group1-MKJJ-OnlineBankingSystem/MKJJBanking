@@ -1,65 +1,175 @@
-[03-Feb-2022 20:04:32 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:04:32 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:04:34 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:04:34 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:04:38 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/logout.php on line 3
-[03-Feb-2022 20:04:38 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/logout.php on line 3
-[03-Feb-2022 20:04:38 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/maurom3/public_html/mkjj/scripts/logout.php on line 9
-[03-Feb-2022 20:04:43 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:04:43 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:08:10 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:08:10 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:08:20 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:08:20 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:08:48 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:08:48 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:09:02 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:09:02 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:09:29 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/logout.php on line 3
-[03-Feb-2022 20:09:29 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/logout.php on line 3
-[03-Feb-2022 20:09:29 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/maurom3/public_html/mkjj/scripts/logout.php on line 9
-[03-Feb-2022 20:09:34 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:09:34 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:10:24 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:10:25 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:11:39 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/logout.php on line 3
-[03-Feb-2022 20:11:39 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/logout.php on line 3
-[03-Feb-2022 20:11:39 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/maurom3/public_html/mkjj/scripts/logout.php on line 9
-[03-Feb-2022 20:11:42 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:11:42 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:11:42 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:11:42 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:12:15 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:12:15 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:14:08 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/register_confirm.php on line 6
-[03-Feb-2022 20:14:08 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/register_confirm.php on line 6
-[03-Feb-2022 20:14:31 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:14:31 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:15:06 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:15:06 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:15:33 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:15:33 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:15:42 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:15:42 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:15:42 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:15:42 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:17:03 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:17:03 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:17:59 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:17:59 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:19:31 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/logout.php on line 3
-[03-Feb-2022 20:19:31 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/logout.php on line 3
-[03-Feb-2022 20:19:31 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/maurom3/public_html/mkjj/scripts/logout.php on line 9
-[03-Feb-2022 20:19:33 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:19:33 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:19:37 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:19:37 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:21:52 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:21:52 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:21:58 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:21:58 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:23:21 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b647676969ff486faf08a160e67cd8b7, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[03-Feb-2022 20:23:21 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
-[07-Feb-2022 20:06:47 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_888fbe3eb4783bec84de5d44d8ae7b84, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/logout.php on line 3
-[07-Feb-2022 20:06:47 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/logout.php on line 3
-[07-Feb-2022 20:06:47 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/maurom3/public_html/mkjj/scripts/logout.php on line 9
+[15-Feb-2022 04:22:15 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/maurom3/public_html/mkjj/scripts/change_pass.php:35) in /home/maurom3/public_html/mkjj/scripts/change_pass.php on line 37
+[15-Feb-2022 04:24:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/maurom3/public_html/mkjj/scripts/change_pass.php:35) in /home/maurom3/public_html/mkjj/scripts/change_pass.php on line 37
+[15-Feb-2022 04:26:55 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/maurom3/public_html/mkjj/scripts/change_pass.php:33) in /home/maurom3/public_html/mkjj/scripts/change_pass.php on line 37
+[15-Feb-2022 04:27:32 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/maurom3/public_html/mkjj/scripts/change_pass.php:35) in /home/maurom3/public_html/mkjj/scripts/change_pass.php on line 37
+[15-Feb-2022 04:28:32 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/maurom3/public_html/mkjj/scripts/change_pass.php:35) in /home/maurom3/public_html/mkjj/scripts/change_pass.php on line 37
+[15-Feb-2022 04:29:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/maurom3/public_html/mkjj/scripts/change_pass.php:33) in /home/maurom3/public_html/mkjj/scripts/change_pass.php on line 37
+[15-Feb-2022 21:07:57 UTC] PHP Warning:  main(): Couldn't fetch mysqli_result in /home/maurom3/public_html/mkjj/scripts/change_user.php on line 42
+[15-Feb-2022 21:08:04 UTC] PHP Warning:  main(): Couldn't fetch mysqli_result in /home/maurom3/public_html/mkjj/scripts/change_user.php on line 42
+[15-Feb-2022 21:13:15 UTC] PHP Warning:  main(): Couldn't fetch mysqli_result in /home/maurom3/public_html/mkjj/scripts/change_user.php on line 50
+[15-Feb-2022 21:13:49 UTC] PHP Warning:  main(): Couldn't fetch mysqli_result in /home/maurom3/public_html/mkjj/scripts/change_user.php on line 50
+[15-Feb-2022 21:19:05 UTC] PHP Warning:  mysqli_result::fetch_assoc(): Couldn't fetch mysqli_result in /home/maurom3/public_html/mkjj/scripts/change_user.php on line 55
+[15-Feb-2022 21:19:05 UTC] PHP Warning:  mysqli_result::fetch_assoc(): Couldn't fetch mysqli_result in /home/maurom3/public_html/mkjj/scripts/change_user.php on line 55
+[15-Feb-2022 21:19:05 UTC] PHP Warning:  mysqli_result::fetch_assoc(): Couldn't fetch mysqli_result in /home/maurom3/public_html/mkjj/scripts/change_user.php on line 55
+[15-Feb-2022 21:19:05 UTC] PHP Warning:  mysqli_result::fetch_assoc(): Couldn't fetch mysqli_result in /home/maurom3/public_html/mkjj/scripts/change_user.php on line 55
+[15-Feb-2022 21:20:06 UTC] PHP Warning:  mysqli_result::fetch_assoc(): Couldn't fetch mysqli_result in /home/maurom3/public_html/mkjj/scripts/change_user.php on line 55
+[15-Feb-2022 21:20:06 UTC] PHP Warning:  mysqli_result::fetch_assoc(): Couldn't fetch mysqli_result in /home/maurom3/public_html/mkjj/scripts/change_user.php on line 55
+[15-Feb-2022 21:20:06 UTC] PHP Warning:  mysqli_result::fetch_assoc(): Couldn't fetch mysqli_result in /home/maurom3/public_html/mkjj/scripts/change_user.php on line 55
+[15-Feb-2022 21:20:06 UTC] PHP Warning:  mysqli_result::fetch_assoc(): Couldn't fetch mysqli_result in /home/maurom3/public_html/mkjj/scripts/change_user.php on line 55
+[18-Feb-2022 03:05:26 UTC] PHP Fatal error:  Uncaught Error: Call to a member function free() on null in /home/maurom3/public_html/mkjj/scripts/change_user.php:82
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/scripts/change_user.php on line 82
+[18-Feb-2022 03:06:05 UTC] PHP Fatal error:  Uncaught Error: Call to a member function free() on null in /home/maurom3/public_html/mkjj/scripts/change_user.php:82
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/scripts/change_user.php on line 82
+[18-Feb-2022 03:09:19 UTC] PHP Fatal error:  Uncaught Error: Call to a member function free() on null in /home/maurom3/public_html/mkjj/scripts/change_user.php:82
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/scripts/change_user.php on line 82
+[18-Feb-2022 03:10:23 UTC] PHP Fatal error:  Uncaught Error: Call to a member function free() on null in /home/maurom3/public_html/mkjj/scripts/change_user.php:83
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/scripts/change_user.php on line 83
+[18-Feb-2022 03:15:46 UTC] PHP Warning:  mysqli_result::free(): Couldn't fetch mysqli_result in /home/maurom3/public_html/mkjj/scripts/change_user.php on line 64
+[18-Feb-2022 03:16:43 UTC] PHP Fatal error:  Uncaught Error: Call to a member function free() on null in /home/maurom3/public_html/mkjj/scripts/change_user.php:83
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/scripts/change_user.php on line 83
+[18-Feb-2022 03:16:57 UTC] PHP Warning:  mysqli_result::free(): Couldn't fetch mysqli_result in /home/maurom3/public_html/mkjj/scripts/change_user.php on line 64
+[18-Feb-2022 03:17:02 UTC] PHP Fatal error:  Uncaught Error: Call to a member function free() on null in /home/maurom3/public_html/mkjj/scripts/change_user.php:83
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/scripts/change_user.php on line 83
+[17-Mar-2022 18:51:12 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/maurom3/public_html/mkjj/scripts/register_confirm.php on line 86
+[17-Mar-2022 18:51:43 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/maurom3/public_html/mkjj/scripts/register_confirm.php on line 110
+[17-Mar-2022 18:52:13 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/maurom3/public_html/mkjj/scripts/register_confirm.php on line 80
+[17-Mar-2022 19:52:32 UTC] PHP Warning:  mysqli_result::free(): Couldn't fetch mysqli_result in /home/maurom3/public_html/mkjj/scripts/deposit.php on line 24
+[17-Mar-2022 19:52:32 UTC] PHP Warning:  A non-numeric value encountered in /home/maurom3/public_html/mkjj/scripts/deposit.php on line 27
+[17-Mar-2022 19:55:17 UTC] PHP Warning:  mysqli_result::free(): Couldn't fetch mysqli_result in /home/maurom3/public_html/mkjj/scripts/deposit.php on line 24
+[17-Mar-2022 19:58:16 UTC] PHP Warning:  mysqli_result::free(): Couldn't fetch mysqli_result in /home/maurom3/public_html/mkjj/scripts/deposit.php on line 24
+[17-Mar-2022 19:59:12 UTC] PHP Warning:  mysqli_result::free(): Couldn't fetch mysqli_result in /home/maurom3/public_html/mkjj/scripts/deposit.php on line 24
+[25-Mar-2022 00:17:46 UTC] PHP Warning:  A non-numeric value encountered in /home/maurom3/public_html/mkjj/scripts/transfer.php on line 19
+[28-Mar-2022 16:21:44 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_5a30321e770b52c55e7c2b0176891886, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[28-Mar-2022 16:21:44 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[28-Mar-2022 16:21:59 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_5a30321e770b52c55e7c2b0176891886, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/create_bank_account.php on line 6
+[28-Mar-2022 16:21:59 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/create_bank_account.php on line 6
+[28-Mar-2022 16:22:08 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_5a30321e770b52c55e7c2b0176891886, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/create_bank_account.php on line 6
+[28-Mar-2022 16:22:08 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/create_bank_account.php on line 6
+[28-Mar-2022 16:22:18 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_5a30321e770b52c55e7c2b0176891886, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[28-Mar-2022 16:22:18 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[28-Mar-2022 16:22:25 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_5a30321e770b52c55e7c2b0176891886, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/create_bank_account.php on line 6
+[28-Mar-2022 16:22:25 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/create_bank_account.php on line 6
+[28-Mar-2022 16:22:32 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_5a30321e770b52c55e7c2b0176891886, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/logout.php on line 3
+[28-Mar-2022 16:22:32 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/logout.php on line 3
+[28-Mar-2022 16:22:32 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/maurom3/public_html/mkjj/scripts/logout.php on line 9
+[28-Mar-2022 16:22:35 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_5a30321e770b52c55e7c2b0176891886, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[28-Mar-2022 16:22:35 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[28-Mar-2022 16:22:43 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_5a30321e770b52c55e7c2b0176891886, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/logout.php on line 3
+[28-Mar-2022 16:22:43 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/logout.php on line 3
+[28-Mar-2022 16:22:43 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/maurom3/public_html/mkjj/scripts/logout.php on line 9
+[28-Mar-2022 21:33:19 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/scripts/transfer.php:83
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/scripts/transfer.php on line 83
+[28-Mar-2022 21:33:49 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/scripts/transfer.php:83
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/scripts/transfer.php on line 83
+[28-Mar-2022 21:33:54 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/scripts/transfer.php:83
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/scripts/transfer.php on line 83
+[28-Mar-2022 21:35:20 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/scripts/transfer.php:83
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/scripts/transfer.php on line 83
+[28-Mar-2022 21:38:23 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/scripts/transfer.php:83
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/scripts/transfer.php on line 83
+[29-Mar-2022 01:02:47 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/scripts/transfer.php:107
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/scripts/transfer.php on line 107
+[29-Mar-2022 01:02:53 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/scripts/transfer.php:107
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/scripts/transfer.php on line 107
+[29-Mar-2022 01:03:29 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/scripts/transfer.php:107
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/scripts/transfer.php on line 107
+[05-Apr-2022 23:04:35 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_e412a7f69ee81c660746caaf25dd3c41, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[05-Apr-2022 23:04:35 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:08:11 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_08075759be880241de0051967556fd13, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:08:11 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:08:13 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_08075759be880241de0051967556fd13, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:08:13 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:08:15 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_08075759be880241de0051967556fd13, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:08:15 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:08:16 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_08075759be880241de0051967556fd13, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:08:16 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:08:16 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_08075759be880241de0051967556fd13, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:08:16 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:08:16 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_08075759be880241de0051967556fd13, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:08:16 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:08:17 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_08075759be880241de0051967556fd13, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:08:17 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:08:25 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_08075759be880241de0051967556fd13, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:08:25 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:08:26 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_08075759be880241de0051967556fd13, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:08:26 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:09:04 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_08075759be880241de0051967556fd13, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:09:04 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:09:11 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_08075759be880241de0051967556fd13, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:09:11 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:10:41 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_08075759be880241de0051967556fd13, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/register_confirm.php on line 6
+[09-Apr-2022 02:10:41 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/register_confirm.php on line 6
+[09-Apr-2022 02:10:46 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_08075759be880241de0051967556fd13, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:10:46 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:11:14 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_08075759be880241de0051967556fd13, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:11:14 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:11:16 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_08075759be880241de0051967556fd13, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:11:16 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:11:17 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_08075759be880241de0051967556fd13, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[09-Apr-2022 02:11:17 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:04:07 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_20065e2d92fba5bbc2b3ff373e165254, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:04:07 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:04:08 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_20065e2d92fba5bbc2b3ff373e165254, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:04:08 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:04:08 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_20065e2d92fba5bbc2b3ff373e165254, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:04:08 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:04:09 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_20065e2d92fba5bbc2b3ff373e165254, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:04:09 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:04:10 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_20065e2d92fba5bbc2b3ff373e165254, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:04:10 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:04:10 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_20065e2d92fba5bbc2b3ff373e165254, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:04:10 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:12:22 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_20065e2d92fba5bbc2b3ff373e165254, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:12:22 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:12:24 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_20065e2d92fba5bbc2b3ff373e165254, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:12:24 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:12:28 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_20065e2d92fba5bbc2b3ff373e165254, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:12:28 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:12:32 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_20065e2d92fba5bbc2b3ff373e165254, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:12:32 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:12:38 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_20065e2d92fba5bbc2b3ff373e165254, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:12:38 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:12:49 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_20065e2d92fba5bbc2b3ff373e165254, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:12:49 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:12:50 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_20065e2d92fba5bbc2b3ff373e165254, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:12:50 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:12:50 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_20065e2d92fba5bbc2b3ff373e165254, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:12:50 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:12:50 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_20065e2d92fba5bbc2b3ff373e165254, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:12:50 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:12:51 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_20065e2d92fba5bbc2b3ff373e165254, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:12:51 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:13:18 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_20065e2d92fba5bbc2b3ff373e165254, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:13:18 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:14:47 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_20065e2d92fba5bbc2b3ff373e165254, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:14:47 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:15:04 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_20065e2d92fba5bbc2b3ff373e165254, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6
+[20-Apr-2022 19:15:04 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/scripts/login_confirm.php on line 6

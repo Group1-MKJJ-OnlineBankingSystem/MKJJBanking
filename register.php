@@ -36,6 +36,12 @@
         $_SESSION['registration_failed'] = '';
     }
     
+    else if ($_SESSION['registration_failed'] == 'phonenumbertaken') {
+        $notice = 'Phone Number already in use. Please try again.';
+        
+        $_SESSION['registration_failed'] = '';
+    }
+    
     //notifies user if some other error occurs
     else if ($_SESSION['registration_failed'] == 'randerr') {
         $notice = 'An error has occurred. Please try again.';
@@ -51,7 +57,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="login.css">
+        <!--<link rel="stylesheet" href="login.css">-->
         <title>MKJJ</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     </head>
@@ -68,6 +74,11 @@
                 text-decoration;
                 color:grey;
             }
+            
+            h1{
+                text-align:center;
+            }
+            
             a:hover{
                 text-decoration;
                 color: #953636;
@@ -79,55 +90,69 @@
             .phpcode{
                 padding:12px;
                 }
+            
             #log-in {
-  width: 30%;
-  padding: 60px;
-  margin: auto;
-  text-align: center;
-}
+              width: 30%;
+              padding: 60px;
+              margin: auto;
+              text-align: center;
+            }
+            
+            input {
+              width: 100%;
+              padding: 12px;
+              margin: 10px 0px;
+              box-sizing: border-box;
+            }
+            
+            select {
+              width: 100%;
+              padding: 12px;
+              margin: 10px 0px;
+              box-sizing: border-box;
+            }
+            
+            button[type="submit"] {
+              background-color: black;
+              border: none;
+              color: white;
+              padding: 12px 30px;
+              text-decoration: none;
+              margin: 12px 2px;
+              cursor: pointer;
+            }
+            
+            input[type="submit"] {
+              background-color: black;
+              border: none;
+              color: white;
+              padding: 12px 30px;
+              text-decoration: none;
+              margin: 12px 2px;
+              cursor: pointer;
+            }
+            
+            label {
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              font-size: 18px;
+              font-weight: 100;
+            
+              line-height: 30px;
+              padding-top: 10px;
+            }
+      
+      @media only screen and (max-width: 600px) {
+      body {
+          font-size: 16px;
+      }
+      #log-in {
+          width: 70%;
+          padding: 30px;
+          margin: auto;
+          text-align: center;
+        }
+    }
 
-input {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0px;
-  box-sizing: border-box;
-}
-
-select {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0px;
-  box-sizing: border-box;
-}
-
-button[type="submit"] {
-  background-color: black;
-  border: none;
-  color: white;
-  padding: 12px 30px;
-  text-decoration: none;
-  margin: 12px 2px;
-  cursor: pointer;
-}
-
-input[type="submit"] {
-  background-color: black;
-  border: none;
-  color: white;
-  padding: 12px 30px;
-  text-decoration: none;
-  margin: 12px 2px;
-  cursor: pointer;
-}
-
-label {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 18px;
-  font-weight: 100;
-
-  line-height: 30px;
-  padding-top: 10px;
-}
             </style>
         <!--outputs notice for user-->
         <div style='color: red;'><?php echo $notice; ?></div>
@@ -154,6 +179,10 @@ label {
                     <div>
                         <!--input for email-->
                         <input type="email" placeholder="Email" name="email" required />
+                    </div>
+                    <div>
+                        <!--input for tel-->
+                        <input type="tel" placeholder="Phone number Ex: 999-999-9999" name="phone_num" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
                     </div>
                     <div>
                         <!--input for first name-->

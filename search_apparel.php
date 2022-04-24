@@ -60,7 +60,7 @@
     
     <div class = "results">
         <?php
-        $searchterm = trim($_POST['searchterm']);
+        $searchterm = trim($_POST['account_num']);
         echo "<center>";
         
         if(!$searchterm){

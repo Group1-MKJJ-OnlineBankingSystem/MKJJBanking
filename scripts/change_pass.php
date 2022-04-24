@@ -5,6 +5,14 @@
     //gets session info
     session_start();
     
+    if(isset($_SESSION["loggedin"])){
+            if(time()-$_SESSION["login_time_stamp"] >600){
+                session_unset();
+                session_destroy();
+                header("Location: login.php");
+            }
+        }
+    
     //takes input passed from form and assigns to variables
     $oldPassword= trim($_POST['oldpass']);
     $pass = trim($_POST['newpass']);

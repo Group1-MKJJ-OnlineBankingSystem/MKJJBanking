@@ -1,3 +1,13 @@
+@media only screen and (max-width: 600px) {
+  #log-in{
+      width: 30%;
+  padding: 0px;
+  margin: auto;
+  text-align: left;
+  }
+}
+
+
 #log-in {
   width: 30%;
   padding: 60px;
@@ -39,11 +49,10 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-label {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 18px;
-  font-weight: 100;
-
-  line-height: 30px;
-  padding-top: 10px;
-}
+/*label {*/
+/*  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+/*  font-size: 18px;*/
+/*  font-weight: 100;*/
+/*  line-height: 30px;*/
+/*  padding-top: 10px;*/
+/*}*/

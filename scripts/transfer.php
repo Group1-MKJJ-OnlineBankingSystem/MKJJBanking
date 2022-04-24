@@ -5,9 +5,18 @@
     //gets session info
     session_start();
     
+    if(isset($_SESSION["loggedin"])){
+            if(time()-$_SESSION["login_time_stamp"] >600){
+                session_unset();
+                session_destroy();
+                header("Location: login.php");
+            }
+        }
+    
     $transfer = trim($_POST['transfer']);
     $senderAcctNum = intval(trim($_POST['sender_account_num']));
     $receiverAcctNum = trim($_POST['receiver_account_num']);
+    $transferType = trim($_POST['transferType']);
     date_default_timezone_set("America/New_York");
     $sDate = date("Y/m/d H:i:s");
     $rDate = date("Y/m/d H:i:s");
@@ -32,7 +41,7 @@
 	}
     
     
-    if (!$transfer || !$senderAcctNum || !$receiverAcctNum){
+    if (!$transfer || !$senderAcctNum || !$receiverAcctNum || !$transferType){
 	    $_SESSION['transfer_failed'] = 'invalid_input';
 	    header('Location: ../homepage.php');
 	    //closes db conection
@@ -65,33 +74,40 @@
 	$numTransactions = $numTransactions + 1;
 	$results->free();
 	
-	$query = "SELECT * FROM ACCOUNTS WHERE bankAccountNumber = '$receiverAcctNum'";
-	$results = $db->query($query);
-	$row = $results->fetch_assoc();
-	if (!$row){
-	   $_SESSION['transaction_failed'] = 'doesntOwnAcct';
-	   header('Location: ../homepage.php');
-	   exit();
+	if ($transferType == "internal"){
+    	$query = "SELECT * FROM ACCOUNTS WHERE bankAccountNumber = '$receiverAcctNum'";
+    	$results = $db->query($query);
+    	$row = $results->fetch_assoc();
+    	if (!$row){
+    	   $_SESSION['transaction_failed'] = 'doesntOwnAcct';
+    	   header('Location: ../homepage.php');
+    	   exit();
+    	}
+    	$receiverCurrentBalance = $row['balance'];
+    	$receiverOwnerID = $row['ownerID'];
+    	$recNumTransactions = $row['numOfTransactions'];
+    	$recNumTransactions = $recNumTransactions + 1;
+    	$results->free();
 	}
-	$receiverCurrentBalance = $row['balance'];
-	$receiverOwnerID = $row['ownerID'];
-	$recNumTransactions = $row['numOfTransactions'];
-	$recNumTransactions = $recNumTransactions + 1;
-	$results->free();
-	
 	
 	
 	//adds slashes for any quotes in inputs
 	if (!get_magic_quotes_gpc()) {
         $transfer = addslashes($transfer);
         $senderAcctNum = addslashes($senderAcctNum);
-        $receiverAcctNum = addslashes($receiverAcctNum);
+        if ($transferType == "internal"){
+            $receiverAcctNum = addslashes($receiverAcctNum);
+        }
 	}
 	
 	if ($senderCurrentBalance >= $transfer){
-        $senderNewBalance = round(doubleval($senderCurrentBalance) - doubleval($transfer),2);
-        $receiverNewBalance = round(doubleval($receiverCurrentBalance) + doubleval($transfer),2);
-	}
+        $senderNewBalance = round((doubleval($senderCurrentBalance) - (doubleval($transfer))*1.03),2);
+        if ($transferType == "internal"){
+            $receiverNewBalance = round(doubleval($receiverCurrentBalance) + doubleval($transfer),2);
+	
+        }
+    }
+	
 	else{
 	 $_SESSION['transaction_failed'] = 'insufficentBalance';
 	   header('Location: ../homepage.php');
@@ -106,14 +122,15 @@
 	
 
 	
-	
-	$sql = "UPDATE ACCOUNTS SET balance='$receiverNewBalance' WHERE bankAccountNumber='$receiverAcctNum' AND ownerID='$receiverOwnerID'";
-	$receiverResults = $db->query($sql);
+	if ($transferType == "internal"){
+    	$sql = "UPDATE ACCOUNTS SET balance='$receiverNewBalance' WHERE bankAccountNumber='$receiverAcctNum' AND ownerID='$receiverOwnerID'";
+    	$receiverResults = $db->query($sql);
+	}
 	$sql = "UPDATE ACCOUNTS SET balance='$senderNewBalance' WHERE bankAccountNumber='$senderAcctNum' AND ownerID='$senderOwnerID'";
 	$senderResults = $db->query($sql);
 	$rtransfer = $transfer + 0;
-	$stransfer = -$transfer + 0;
-    if ($receiverResults && $senderResults) {
+	$stransfer = -$transfer*1.03 + 0;
+    if (($receiverResults || $transferType == "external") && $senderResults) {
         
         $query2 = "INSERT INTO TRANSACTIONS VALUES
 	    ('".$sDate."', '".$sTransactionType."', '".$stransfer."', '".$senderAcctNum."', '".$senderTransactionid."')";
@@ -121,16 +138,20 @@
 	    //tries to insert user info into db
 	    $transactionResults = $db->query($query2);
 	    
-	    $query3 = "INSERT INTO TRANSACTIONS VALUES
-	    ('".$rDate."', '".$rTransactionType."', '".$rtransfer."', '".$receiverAcctNum."', '".$receiverTransactionid."')";
-	
-	    //tries to insert user info into db
-	    $senderTransferResults = $db->query($query3);
 	    
+	    if ($transferType == "internal"){
+    	    $query3 = "INSERT INTO TRANSACTIONS VALUES
+    	    ('".$rDate."', '".$rTransactionType."', '".$rtransfer."', '".$receiverAcctNum."', '".$receiverTransactionid."')";
+    	
+    	    //tries to insert user info into db
+    	    $senderTransferResults = $db->query($query3);
+	    }
 	    $sql = "UPDATE ACCOUNTS SET numOfTransactions='$numTransactions' WHERE ownerID='$cID' AND bankAccountNumber='$senderAcctNum'";
 	    $results2 = $db->query($sql);
-	    $sql2 = "UPDATE ACCOUNTS SET numOfTransactions='$recNumTransactions' WHERE ownerID='$receiverOwnerID' AND bankAccountNumber='$receiverAcctNum'";
-	    $results3 = $db->query($sql2);
+	    if ($transferType == "internal"){
+    	    $sql2 = "UPDATE ACCOUNTS SET numOfTransactions='$recNumTransactions' WHERE ownerID='$receiverOwnerID' AND bankAccountNumber='$receiverAcctNum'";
+    	    $results3 = $db->query($sql2);
+	    }
 	    
         
 	    $_SESSION['transferSuccess'] = 'successful';

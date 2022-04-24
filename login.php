@@ -1,7 +1,7 @@
 <?php
     //gets session info
     session_start();
-    
+
     //informs user if input was not put in correctly
     if ($_SESSION['login_failed'] == 'bad_input') {
         $notice = 'ERROR: Log in info was not properly input. Please try again.';
@@ -14,6 +14,10 @@
         $_SESSION['login_failed'] = '';
     }
     
+    else if ($_SESSION['regdone'] == true) {
+        $notice2 = 'Account successfully created, please sign in.';
+        $_SESSION['regdone'] = false;
+    }
     //informs user if password is incorrect
     else if ($_SESSION['login_failed'] == 'wrong_password') {
         $notice = 'ERROR: Incorrect password. Please try again.';
@@ -21,10 +25,20 @@
     }
     
     //informs user if they tried to add items to cart prior to logging in
-    else if ($_SESSION['needlog'] == true) {
+    else if ($_SESSION['needlog'] == true ) {
         $notice = 'ERROR: You are not logged in. Please log in and try again.';
         $_SESSION['needlog'] = false;
     }
+    // // variables: user 
+    // $username = $_POST["username"];
+    
+    // if(isset($_POST["Login"])){
+    //     $_SESSION["user"] = $username;
+        
+    //     $_SESSION["login_time_stamp"] = time();
+    //     header("Location:homepage.php");
+    // }
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,6 +49,7 @@
         <link rel="stylesheet" href="login.css">
         <title>MKJJ</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
     </head>
     
     <!--login.php takes username and password input from a user that already made an account-->
@@ -111,17 +126,18 @@ label {
         </style>
         <!--outputs notice for user-->
         <div style='color: red;'><?php echo $notice; ?></div>
-        
             <div id="log-in">
             
             <!--passes inputs to login_confirm.php to scripts-->
             <form action='scripts/login_confirm.php' method='post'>
                 <div class="log-in">
                     <h1><center>CUSTOMER LOGIN</center></h1>
+                    <div style='color: red;'><?php echo $notice2; ?></div>
+                    
                     <p><center>Please enter your username and password:</center></p>
                     <div>
                         <!--input for username-->
-                        <input type="text" placeholder="Username" name='user' required />
+                        <input type="text" placeholder="Username" name='user' required autofocus/>
                     </div>
                     <div>
                         <!--input for password-->
@@ -138,7 +154,7 @@ label {
             <div>
                 <center>
                     Don't have an account? <a class="link" href="register.php">Create one!</a> <br>
-                    Apart of our team? <a class="link" href="employee/emp_login.php">Employee Log In</a>
+                    Are you an Admin? <a class="link" href="employee/emp_login.php">Admin Log In</a>
                 </center>
             </div>
         </div>

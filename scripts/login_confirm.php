@@ -7,7 +7,7 @@
     
     //checks if user is already logged in
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
-        header('Location: ../homepage.html');
+        header('Location: ../homepage.php');
         $_SESSION['relog'] = true;
         
         //closes db conection
@@ -55,7 +55,8 @@
         $_SESSION['name'] = $row['cFname'];
         
         $_SESSION['newlog'] = true;
-        header('Location: ../homepage.html');
+        $_SESSION["login_time_stamp"] = time();
+        header('Location: ../homepage.php');
         
         //closes db connection
         $result->free();

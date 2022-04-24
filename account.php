@@ -87,6 +87,14 @@
         $db->close();
         exit();
     }
+    
+    if(isset($_SESSION["loggedin"])){
+        if(time()-$_SESSION["login_time_stamp"] >600){
+            session_unset();
+            session_destroy();
+            header("Location: login.php");
+        }
+    }
 
     //creates query to get user info from CUSTOMER view
     $query = "SELECT * FROM CUSTOMER WHERE cUsername = '".$_SESSION['user']."'";
@@ -103,6 +111,22 @@
     $address = $row['cAddress'];
     $password = $row['cPassword'];
     $phone_num = $row['phoneNumber'];
+    
+    
+    ## Start - stop admin from viewing page
+    $employeeTest = "SELECT eUsername FROM EMPLOYEE WHERE eUsername = '".$_SESSION['user']."'";
+    //gets info from db
+    $isEMP = $db->query($employeeTest);
+    $num_EMP = $isEMP->num_rows;
+    if ($num_EMP > 0){
+        $_SESSION['hasAccess'] = false;
+        header('Location: ./employee/emp_login.php');
+
+        //closes db connection
+        $db->close();
+        exit();
+    }
+    ## End - stop admin from viewing page
 
     //closes connection and clears results
     $results->free();
@@ -117,7 +141,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <title>MKJJ</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../assets/icon_draft1.png">
 </head>
     <body>
         <ul>
@@ -131,7 +155,7 @@
             -->
             <li style="float:right"><a class="active" href="./scripts/logout.php">Log Out</a></li>
             <li style="float:right"><a class="active" href="./account.php">Settings</a></li>
-            <li style="float:right"><a class="active" href="./about.html">About</a></li>
+            <li style="float:right"><a class="active" href="./about.php">About</a></li>
             <li style="float:right"><a class="active" href="./services.php">Services</a></li>
         </ul>
             <style>
@@ -168,9 +192,13 @@
                 .form-container .cancel {
                     background-color: red;
                 }
-                div2{
-                    padding: 200px 200px 200px 200px;
-                    margin: 25px 50px 75px 100px;
+                /*div2{*/
+                /*    padding: 200px 200px 200px 200px;*/
+                /*    margin: 25px 50px 75px 100px;*/
+                /*}*/
+                
+                .info{
+                    text-align:center;
                 }
             </style>
         <div class="hero-wrapper">
@@ -188,7 +216,7 @@
         </div>
 
         <!--prompts user's information-->
-        <div>
+        <div class="info">
             
             <div2><b><u>User Information:</u></div2></b>
             <div></div>
@@ -233,16 +261,28 @@
             <input type="password" placeholder="Enter Old Password" name="oldpass" required>
         
             <p><label for="newPass"><b>New Password</b></label>
-            <input type="password" placeholder="Enter New Password" name="newpass" required></p>
+            <input type="password" placeholder="Enter New Password" name="newpass" onChange="onChange()" required></p>
             
             <p><label for="newPassConf"><b>Confirm New Password</b></label>
-            <input type="password" placeholder="Reenter New Password" name="connewpass" required></p>
+            <input type="password" placeholder="Reenter New Password" name="connewpass" onChange="onChange()" required></p>
         
             <button type="submit" class="btn">Update Password</button>
             <button type="button" class="btn cancel" onclick="closePasswordForm()">Cancel</button>
             
           </form>
         </div1>
+        
+        <script>
+            function onChange() {
+            const password = document.querySelector('input[name=newpass]');
+            const confirm = document.querySelector('input[name=connewpass]');
+            if (confirm.value === password.value) {
+                confirm.setCustomValidity('');
+            } else {
+                confirm.setCustomValidity('Passwords do not match');
+            }
+        }
+        </script>
         
         <div1 class="form-popup" id="usernameForm">
           <form action='./scripts/change_user.php' method='post' class="form-container">

@@ -5,6 +5,14 @@
     //gets session info
     session_start();
     
+    if(isset($_SESSION["loggedin"])){
+            if(time()-$_SESSION["login_time_stamp"] >600){
+                session_unset();
+                session_destroy();
+                header("Location: login.php");
+            }
+        }
+    
     $deposit = trim($_POST['deposit']);
     $acctNum = intval(trim($_POST['account_num']));
     date_default_timezone_set("America/New_York");

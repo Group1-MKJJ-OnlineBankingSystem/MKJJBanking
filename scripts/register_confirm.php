@@ -54,8 +54,12 @@
     $query = 'SELECT customerID, cUsername, cEmail, phoneNumber FROM CUSTOMER';
 	$results = $db->query($query);
 	
+	$queryEmp = 'SELECT eUsername FROM EMPLOYEE';
+	$resultsEmp = $db->query($queryEmp);
+	
 	//gets the number of results
 	$num_results = $results->num_rows;
+	$num_empresults = $resultsEmp->num_rows;
     
     //generates a 6 digit random number for customer id
     $custid = mt_rand(100000, 999999);
@@ -76,6 +80,22 @@
 	
 	//hashes password
 	$pass = password_hash($pass, PASSWORD_DEFAULT);
+	
+	
+	for ($i = 0; $i < $num_empresults; $i++) {
+        $row = $resultsEmp->fetch_assoc();
+        //compares current usernames with new username    
+        if ($user == $row['eUsername']) {
+            //exits program is there is a match
+            $_SESSION['registration_failed'] = 'usertaken';
+            header('Location: ../register.php');
+            
+            //closes db conection
+            $resultsEmp->free();
+	        $db->close();
+            exit();
+        }
+	}
   
     //loops through all current customers
     for ($i = 0; $i < $num_results; $i++) {
