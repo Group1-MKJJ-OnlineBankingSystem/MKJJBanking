@@ -64,15 +64,15 @@
                     font-size:24px;
                     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 }
-                a{
-                    text-decoration;
-                    color:grey;
-                }
-                a:hover{
-                    text-decoration;
-                    color: #953636;
-                    transition:1s;
-                }
+                /*a{*/
+                /*    text-decoration;*/
+                /*    color:grey;*/
+                /*}*/
+                /*a:hover{*/
+                /*    text-decoration;*/
+                /*    color: #953636;*/
+                /*    transition:1s;*/
+                /*}*/
                 button{
                     dont-size:16px;
                 }
@@ -105,6 +105,7 @@
             $searchterm = addslashes($searchterm);
         }
         
+        
         $query = "SELECT * FROM TRANSACTIONS where transactionID = ".$searchterm;
         $result = $db->query($query);
         $num_results = $result->num_rows;
@@ -125,6 +126,7 @@
             
             
         // }
+        
         $row = $result->fetch_assoc();
         echo '<div class="history-card">';
         echo '<div class="card-info"><b>Date of Transaction</b></br>'.$row['dateOfTransaction'].'</div>';
@@ -137,7 +139,8 @@
         echo '<div class="vl"></div>';
         echo '<div class="card-info"><b>Amount</b></br>'.money_format("$%i",$row['changeInBalance']).'</div>';
         echo "<br/> </div>";
-            
+        
+        if($row['transactionType'] != "transfer sent" && $row['transactionType'] != "transfer received"){
         echo "<div><h2 style=\"text-align: center;\">Modify Transaction</h2></div>";
         echo '<form action="./scripts/transaction_edit.php" method="post">';
             echo '<div class="history-card">';
@@ -156,7 +159,9 @@
             //echo '<div class="card-info"><b>Amount</b></br>$'.'<form action="./scripts/transaction_edit.php" method="post"><input type="number">'.'</input><input type="submit"></input></form>'.'</div>'.'</div>';
             echo "<br/> </div>";
         echo "</form>";
-        
+        }else{
+         echo "<center>Sorry you cant modify transfers</center>";
+        }
         
         $result->free();
         $db->close();

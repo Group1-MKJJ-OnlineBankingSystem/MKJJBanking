@@ -10,6 +10,37 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
     <body>
+        
+        <style>
+                .form-popup {
+                    display: none;
+                    position: fixed;
+                    bottom: 25px;
+                    right: 25px;
+                    border: 5px solid #000000;
+                    z-index: 9;
+                    
+                }
+                .form-container {
+                    max-width: 800px;
+                    padding: 20px;
+                    background-color: white;
+                }
+                .form-container .btn {
+                     background-color: #04AA6D;
+                     color: white;
+                     padding: 16px 20px;
+                     border: none;
+                     cursor: pointer;
+                     width: 100%;
+                     margin-bottom:10px;
+                     opacity: 0.8;
+                }
+                .form-container .cancel {
+                    background-color: red;
+                }
+            </style>
+        
         <ul>
             <li><a class="active admin_home" href="./homepage_admin.php">Admin Home</a></li>
             <!--<li><a class="active" href="../homepage.php">Home</a></li>-->
@@ -34,6 +65,83 @@
             <button class="mkjj-button" onclick="openWithdrawalForm()">Withdrawal</button>
             <button class="mkjj-button" onclick="openTransferForm()">Transfer</button>
         </center>
+    
+        <div class="form-popup" id="depositForm">
+            <form action='./scripts/emp_deposit.php' method='post' class="form-container">
+            <h1>Deposit</h1>
         
+            <p><label for="deposit"><b>Deposit: $</b></label>
+            <input type="number" min="0.01" step="0.01" placeholder="Enter deposit amount" name="deposit" required></p>
+            <p><label for="account_num"><b>Account Number: </b></label>
+            <input type="acctNumber" pattern="4+[0-9]{11}" title="A valid account number starts with a 4 that is followed by 11 more digits. Ex: 412345678901" placeholder="Ex: 444444444444" name="account_num" required></p>
+            </p>
+            <button type="submit" class="btn">Confirm Deposit</button>
+            <button type="button" class="btn cancel" onclick="closeDepositForm()">Cancel</button>
+            
+          </form>
+        </div>
+        
+        <div class="form-popup" id="withdrawalForm">
+            <form action='./scripts/emp_withdrawal.php' method='post' class="form-container">
+            <h1>Withdrawal</h1>
+        
+            <p><label for="withdrawal"><b>Withdrawal: $</b></label>
+            <input type="number" min="0.01" step="0.01" placeholder="Enter withdrawal amount" name="withdrawal" required></p>
+            <p><label for="account_num"><b>Account Number: </b></label>
+            <input type="acctNumber" pattern="4+[0-9]{11}" title="A valid account number starts with a 4 that is followed by 11 more digits. Ex: 412345678901" placeholder="Ex: 444444444444" name="account_num" required></p>
+            <button type="submit" class="btn">Confirm Withdrawal</button>
+            <button type="button" class="btn cancel" onclick="closeWithdrawalForm()">Cancel</button>
+            
+          </form>
+        </div>
+        
+        <div class="form-popup" id="transferForm">
+            <form action='./scripts/emp_transfer.php' method='post' class="form-container">
+            <h1>Transfer</h1>
+        
+            <p><label for="transfer"><b>Transfer: $</b></label>
+            <input type="number" min="0.01" step="0.01" placeholder="Enter transfer amount" name="transfer" required></p>
+            <p><label for="account_num"><b>Sender Account Number: </b></label>
+            <input type="acctNumber" pattern="4+[0-9]{11}" title="A valid account number starts with a 4 that is followed by 11 more digits. Ex: 412345678901" placeholder="Ex: 444444444444" name="sender_account_num" required> </p>
+            </p>
+            <label for="acctType"><b>Transaction Type: </b></label>
+            <select name="transferType" id="typeOfTransfer">
+                <option value="internal">Internal</option>
+                <option value="external">External</option>
+                </select>
+            <p><label for="receiver_num"><b>Receiver Account Number: </b></label>
+            <input type="acctNumber" pattern="4+[0-9]{11}" title="A valid account number starts with a 4 that is followed by 11 more digits. Ex: 412345678901" placeholder="Ex: 444444444444" name="receiver_account_num" required> </p>
+            <button type="submit" class="btn">Confirm Transfer</button>
+            <button type="button" class="btn cancel" onclick="closeTransferForm()">Cancel</button>
+            
+          </form>
+        </div>
+    
+    <script>
+        function openDepositForm() {
+          document.getElementById("depositForm").style.display = "block";
+          document.getElementById("withdrawalForm").style.display = "none";
+          document.getElementById("transferForm").style.display = "none";
+        }
+        function closeDepositForm() {
+          document.getElementById("depositForm").style.display = "none";
+        }
+        function openWithdrawalForm() {
+          document.getElementById("depositForm").style.display = "none";
+          document.getElementById("withdrawalForm").style.display = "block";
+          document.getElementById("transferForm").style.display = "none";
+        }
+        function closeWithdrawalForm() {
+          document.getElementById("withdrawalForm").style.display = "none";
+        }
+        function openTransferForm() {
+          document.getElementById("depositForm").style.display = "none";
+          document.getElementById("withdrawalForm").style.display = "none";
+          document.getElementById("transferForm").style.display = "block";
+        }
+        function closeTransferForm() {
+          document.getElementById("transferForm").style.display = "none";
+        }
+    </script>    
     </body>
 </html>

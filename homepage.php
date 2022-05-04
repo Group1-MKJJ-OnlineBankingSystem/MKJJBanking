@@ -111,31 +111,11 @@
         return $mask_number;
     }
     
-    // if(isset($_SESSION["user"])){
-    //     if(time()-$_SESSION["user"] >30){
-    //         session_unset();
-    //         session_destroy();
-    //         header("Location: ./login.php");
-    //     }
-    // }
-    // else
-    // {
-    //     header("Location: ./login.php");
-    // }
+    $query3 = "SELECT * FROM `ACCOUNTS`as a, `CUSTOMER` as c WHERE c.customerID = a.ownerID AND c.cUsername = '".$_SESSION['user']."' AND status = 'pending approval'";
+    //gets info from db
+    $result3s = $db->query($query3);
+    $numOfpendingAccounts = mysqli_num_rows($result3s);
     
-    // $query2 = "SELECT * FROM `EMPLOYEE` WHERE eUsername = '".$_SESSION['user']."'";
-    // //gets info from db
-    // $results2 = $db->query($query2);
-    // $row2 = $results2->fetch_assoc();
-    // $num_results2 = $result2->num_rows;
-    
-    // if($results2){
-    //     echo '<style type="text/css">
-    //     li a.active.admin_home {
-    //         display: none !important;
-    //     }
-    //     </style>';
-    // }
     
     //closes connection
     $db->close();
@@ -233,7 +213,7 @@
             <h2>Bank Accounts</h2>
             <div>
                 <?php
-                    if($numOfApprovedAccounts == 0){
+                    if($numOfApprovedAccounts == 0 && $numOfpendingAccounts == 0){
                         echo "No open accounts";
                     } else {
                         for($i = 0; $i < $numOfAccounts; $i++){

@@ -1057,3 +1057,210 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 128
+[25-Apr-2022 17:52:40 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/employee/emp_search.php:128
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 128
+[25-Apr-2022 18:22:09 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/employee/emp_search.php:128
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 128
+[25-Apr-2022 18:22:27 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/employee/emp_search.php:128
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 128
+[25-Apr-2022 18:23:55 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/employee/emp_search.php:128
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 128
+[25-Apr-2022 18:24:02 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/employee/emp_search.php:128
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 128
+[25-Apr-2022 18:24:13 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/employee/emp_search.php:128
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 128
+[25-Apr-2022 18:24:39 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/employee/emp_search.php:128
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 128
+[25-Apr-2022 18:26:11 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/employee/emp_search.php:128
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 128
+[25-Apr-2022 18:36:55 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b69df04520478ea93c1f0c21e8840102, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:36:55 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:36:59 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b69df04520478ea93c1f0c21e8840102, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/employee/homepage_admin.php on line 6
+[25-Apr-2022 18:36:59 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/employee/homepage_admin.php on line 6
+[25-Apr-2022 18:36:59 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b69df04520478ea93c1f0c21e8840102, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:36:59 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:37:02 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b69df04520478ea93c1f0c21e8840102, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/employee/homepage_admin.php on line 6
+[25-Apr-2022 18:37:02 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/employee/homepage_admin.php on line 6
+[25-Apr-2022 18:37:02 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b69df04520478ea93c1f0c21e8840102, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:37:02 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:37:06 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b69df04520478ea93c1f0c21e8840102, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:37:06 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:37:09 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b69df04520478ea93c1f0c21e8840102, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/employee/homepage_admin.php on line 6
+[25-Apr-2022 18:37:09 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/employee/homepage_admin.php on line 6
+[25-Apr-2022 18:37:09 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b69df04520478ea93c1f0c21e8840102, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:37:09 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:37:11 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b69df04520478ea93c1f0c21e8840102, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:37:11 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:37:11 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b69df04520478ea93c1f0c21e8840102, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:37:11 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:37:12 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b69df04520478ea93c1f0c21e8840102, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:37:12 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:37:12 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b69df04520478ea93c1f0c21e8840102, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:37:12 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:37:12 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b69df04520478ea93c1f0c21e8840102, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:37:12 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:37:17 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b69df04520478ea93c1f0c21e8840102, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:37:17 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:37:21 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b69df04520478ea93c1f0c21e8840102, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/employee/homepage_admin.php on line 6
+[25-Apr-2022 18:37:21 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/employee/homepage_admin.php on line 6
+[25-Apr-2022 18:37:21 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b69df04520478ea93c1f0c21e8840102, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:37:21 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:37:25 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b69df04520478ea93c1f0c21e8840102, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/employee/homepage_admin.php on line 6
+[25-Apr-2022 18:37:25 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/employee/homepage_admin.php on line 6
+[25-Apr-2022 18:37:25 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b69df04520478ea93c1f0c21e8840102, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:37:25 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:47:28 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b69df04520478ea93c1f0c21e8840102, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/employee/homepage_admin.php on line 6
+[25-Apr-2022 18:47:28 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/employee/homepage_admin.php on line 6
+[25-Apr-2022 18:47:28 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php73/sess_b69df04520478ea93c1f0c21e8840102, O_RDWR) failed: Permission denied (13) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:47:28 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php73) in /home/maurom3/public_html/mkjj/employee/emp_login.php on line 3
+[25-Apr-2022 18:51:29 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/employee/emp_search.php:128
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 128
+[25-Apr-2022 18:52:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/employee/emp_search.php:128
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 128
+[25-Apr-2022 18:56:58 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/employee/emp_search.php:128
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 128
+[25-Apr-2022 19:01:10 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/employee/emp_search.php:128
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 128
+[25-Apr-2022 19:01:14 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/employee/emp_search.php:128
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 128
+[25-Apr-2022 19:01:45 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/employee/emp_search.php:128
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 128
+[25-Apr-2022 19:02:21 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/employee/emp_search.php:128
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 128
+[25-Apr-2022 19:06:23 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/employee/emp_search.php:128
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 128
+[25-Apr-2022 19:06:28 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/employee/emp_search.php:128
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 128
+[25-Apr-2022 19:11:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function contains() in /home/maurom3/public_html/mkjj/employee/emp_search.php:129
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 129
+[25-Apr-2022 19:11:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function contains() in /home/maurom3/public_html/mkjj/employee/emp_search.php:129
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 129
+[25-Apr-2022 19:11:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function contains() in /home/maurom3/public_html/mkjj/employee/emp_search.php:129
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 129
+[25-Apr-2022 19:11:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function contains() in /home/maurom3/public_html/mkjj/employee/emp_search.php:129
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 129
+[25-Apr-2022 19:11:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function contains() in /home/maurom3/public_html/mkjj/employee/emp_search.php:129
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 129
+[25-Apr-2022 19:11:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function contains() in /home/maurom3/public_html/mkjj/employee/emp_search.php:129
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 129
+[25-Apr-2022 19:11:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function contains() in /home/maurom3/public_html/mkjj/employee/emp_search.php:129
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 129
+[25-Apr-2022 19:11:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function contains() in /home/maurom3/public_html/mkjj/employee/emp_search.php:129
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 129
+[25-Apr-2022 19:12:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function contains() in /home/maurom3/public_html/mkjj/employee/emp_search.php:143
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 143
+[25-Apr-2022 19:13:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function contains() in /home/maurom3/public_html/mkjj/employee/emp_search.php:143
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 143
+[25-Apr-2022 19:13:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function contains() in /home/maurom3/public_html/mkjj/employee/emp_search.php:143
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 143
+[25-Apr-2022 19:13:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function contains() in /home/maurom3/public_html/mkjj/employee/emp_search.php:143
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 143
+[25-Apr-2022 19:13:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function contains() in /home/maurom3/public_html/mkjj/employee/emp_search.php:143
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 143
+[25-Apr-2022 19:13:36 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/employee/emp_search.php:130
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 130
+[25-Apr-2022 19:13:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function contains() in /home/maurom3/public_html/mkjj/employee/emp_search.php:143
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 143
+[25-Apr-2022 19:16:32 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/employee/emp_search.php:130
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 130
+[25-Apr-2022 19:16:34 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/employee/emp_search.php:130
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 130
+[25-Apr-2022 19:16:45 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/employee/emp_search.php:130
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 130
+[25-Apr-2022 19:20:05 UTC] PHP Warning:  Use of undefined constant status - assumed 'status' (this will throw an Error in a future version of PHP) in /home/maurom3/public_html/mkjj/employee/account_requests.php on line 115
+[25-Apr-2022 19:21:14 UTC] PHP Warning:  Use of undefined constant status - assumed 'status' (this will throw an Error in a future version of PHP) in /home/maurom3/public_html/mkjj/employee/account_requests.php on line 115
+[25-Apr-2022 19:21:14 UTC] PHP Warning:  Use of undefined constant status - assumed 'status' (this will throw an Error in a future version of PHP) in /home/maurom3/public_html/mkjj/employee/account_requests.php on line 115
+[25-Apr-2022 19:21:14 UTC] PHP Warning:  Use of undefined constant status - assumed 'status' (this will throw an Error in a future version of PHP) in /home/maurom3/public_html/mkjj/employee/account_requests.php on line 135
+[25-Apr-2022 19:21:21 UTC] PHP Warning:  Use of undefined constant status - assumed 'status' (this will throw an Error in a future version of PHP) in /home/maurom3/public_html/mkjj/employee/account_requests.php on line 115
+[25-Apr-2022 19:23:31 UTC] PHP Warning:  Use of undefined constant status - assumed 'status' (this will throw an Error in a future version of PHP) in /home/maurom3/public_html/mkjj/employee/account_requests.php on line 115
+[25-Apr-2022 19:24:10 UTC] PHP Warning:  Use of undefined constant status - assumed 'status' (this will throw an Error in a future version of PHP) in /home/maurom3/public_html/mkjj/employee/account_requests.php on line 115
+[25-Apr-2022 19:26:07 UTC] PHP Warning:  Use of undefined constant status - assumed 'status' (this will throw an Error in a future version of PHP) in /home/maurom3/public_html/mkjj/employee/account_requests.php on line 115
+[25-Apr-2022 19:26:22 UTC] PHP Warning:  Use of undefined constant status - assumed 'status' (this will throw an Error in a future version of PHP) in /home/maurom3/public_html/mkjj/employee/account_requests.php on line 115
+[25-Apr-2022 19:26:31 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/employee/emp_search.php:130
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 130
+[25-Apr-2022 19:56:10 UTC] PHP Warning:  Use of undefined constant status - assumed 'status' (this will throw an Error in a future version of PHP) in /home/maurom3/public_html/mkjj/employee/account_requests.php on line 115
+[26-Apr-2022 01:56:14 UTC] PHP Warning:  Use of undefined constant status - assumed 'status' (this will throw an Error in a future version of PHP) in /home/maurom3/public_html/mkjj/employee/account_requests.php on line 115
+[26-Apr-2022 02:03:02 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/employee/emp_search.php:130
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 130
+[26-Apr-2022 02:04:05 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/employee/emp_search.php:130
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 130
+[29-Apr-2022 22:55:15 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/maurom3/public_html/mkjj/employee/emp_search.php:130
+Stack trace:
+#0 {main}
+  thrown in /home/maurom3/public_html/mkjj/employee/emp_search.php on line 130
