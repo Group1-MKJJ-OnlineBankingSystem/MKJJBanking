@@ -32,15 +32,7 @@
 	}
     
 	
-	$query = "SELECT * FROM ACCOUNTS WHERE bankAccountNumber = '$acctNum'";
-	$results = $db->query($query);
-	$row = $results->fetch_assoc();
-	$currentBalance = $row['balance'];
-	$acctOwner = $row['ownerID'];
-	$numTransactions = $row['numOfTransactions'];
-	$numTransactions = $numTransactions + 1;
-	$results->free();
-	
+
 	
 	if (!$deposit || !$acctNum){
 	    $_SESSION['registration_failed'] = 'invalid_input';
@@ -55,6 +47,21 @@
         $acctNum = addslashes($acctNum);
         $deposit = addslashes($deposit);
 	}
+	
+	
+	$query = "SELECT * FROM ACCOUNTS WHERE bankAccountNumber = '$acctNum'";
+	$results = $db->query($query);
+	$row = $results->fetch_assoc();
+	if (!$row){
+	   $_SESSION['transaction_failed'] = 'doesntOwnAcct';
+	   header('Location: ../addTransaction.php');
+	   exit();
+	}
+	$currentBalance = $row['balance'];
+	$acctOwner = $row['ownerID'];
+	$numTransactions = $row['numOfTransactions'];
+	$numTransactions = $numTransactions + 1;
+	$results->free();
 	
 	
     $newBalance = round(doubleval($currentBalance) + doubleval($deposit),2);

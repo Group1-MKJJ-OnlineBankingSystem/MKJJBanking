@@ -35,6 +35,11 @@
 	$query = "SELECT * FROM ACCOUNTS WHERE bankAccountNumber = '$acctNum'";
 	$results = $db->query($query);
 	$row = $results->fetch_assoc();
+	if (!$row){
+	   $_SESSION['transaction_failed'] = 'doesntOwnAcct';
+	   header('Location: ../addTransaction.php');
+	   exit();
+	}
 	$currentBalance = $row['balance'];
 	$acctOwner = $row['ownerID'];
 	$numTransactions = $row['numOfTransactions'];
@@ -72,7 +77,7 @@
 	$sql = "UPDATE ACCOUNTS SET numOfTransactions='$numTransactions' WHERE ownerID='$cID' AND bankAccountNumber='$acctNum'";
 	$results2 = $db->query($sql);
         
-	    $_SESSION['depositSuccess'] = 'successful';
+	    $_SESSION['withdrawalSuccess'] = 'successful';
 	    header('Location: ../addTransaction.php');
 	    exit();
 	}

@@ -1,3 +1,35 @@
+<?php
+    //gets db connection info
+    require_once '../db_connect.php';
+    
+    //gets session info
+    session_start();
+
+if ($_SESSION['depositSuccess'] == 'successful'){
+        $notice = 'Deposit was Successful';
+        $_SESSION['depositSuccess'] = '';
+    } 
+    else if ($_SESSION['withdrawalSuccess'] == 'successful'){
+        $notice = 'Withdrawal was Successful';
+        $_SESSION['withdrawalSuccess'] = '';
+    } 
+    else if ($_SESSION['transferSuccess'] == 'successful'){
+        $notice = 'Transfer was Successful';
+        $_SESSION['transferSuccess'] = '';
+    } 
+    else if ($_SESSION['transaction_failed'] == 'doesntOwnAcct'){
+        $notice = 'That Account Does Not Exist';
+        $_SESSION['transaction_failed'] = '';
+    }
+    else if ($_SESSION['transaction_failed'] == 'insufficentBalance'){
+        $notice = 'Insufficent Balance';
+        $_SESSION['transaction_failed'] = '';
+    }
+    
+        //closes connection
+    $db->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,7 +85,7 @@
             <li style="float:right"><a class="active" href="../scripts/logout.php">Log Out</a></li>
             <li style="float:right"><a class="active" href="./emp_settings.php">Settings</a></li>
         </ul>
-
+        
         <div class="hero-wrapper">
             <div class="hero-wrapper-squared">
                 <h1>Add a Transaction</h1>
@@ -61,6 +93,7 @@
         </div>
         <br>
         <center>
+            <center><div style='color: red;'><?php echo $notice; ?></div></center>
             <button class="mkjj-button" onclick="openDepositForm()">Deposit</button>
             <button class="mkjj-button" onclick="openWithdrawalForm()">Withdrawal</button>
             <button class="mkjj-button" onclick="openTransferForm()">Transfer</button>

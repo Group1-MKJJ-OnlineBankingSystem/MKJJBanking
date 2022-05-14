@@ -110,10 +110,12 @@
         $result = $db->query($query);
         $num_results = $result->num_rows;
         
-        
-        // if($num_results == 0){
-        //     echo "No results found.";
-        // }
+        if(empty($searchterm)){
+            echo "<p style='text-align:center;'>No transaction ID entered yet."."</p>";
+        }
+        else if($num_results == 0){
+            echo "<p style='text-align:center;'>No results found."."</p>";
+        }
         
         // for($i=0; $i < $num_results; $i++) {
         //     $row = $result->fetch_assoc();
@@ -126,7 +128,7 @@
             
             
         // }
-        
+        else{
         $row = $result->fetch_assoc();
         echo '<div class="history-card">';
         echo '<div class="card-info"><b>Date of Transaction</b></br>'.$row['dateOfTransaction'].'</div>';
@@ -162,7 +164,7 @@
         }else{
          echo "<center>Sorry you cant modify transfers</center>";
         }
-        
+        }
         $result->free();
         $db->close();
         ?>

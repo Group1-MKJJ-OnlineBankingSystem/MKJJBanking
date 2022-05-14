@@ -48,6 +48,15 @@
 	    $db->close();
 	    exit();
 	}
+		
+	//adds slashes for any quotes in inputs
+	if (!get_magic_quotes_gpc()) {
+        $transfer = addslashes($transfer);
+        $senderAcctNum = addslashes($senderAcctNum);
+        if ($transferType == "internal"){
+            $receiverAcctNum = addslashes($receiverAcctNum);
+        }
+	}
 	
 	
 	
@@ -81,15 +90,7 @@
     	$results->free();
 	}
 	
-	
-	//adds slashes for any quotes in inputs
-	if (!get_magic_quotes_gpc()) {
-        $transfer = addslashes($transfer);
-        $senderAcctNum = addslashes($senderAcctNum);
-        if ($transferType == "internal"){
-            $receiverAcctNum = addslashes($receiverAcctNum);
-        }
-	}
+
 	
 	if ($senderCurrentBalance >= $transfer){
         $senderNewBalance = round((doubleval($senderCurrentBalance) - (doubleval($transfer))*1.03),2);
