@@ -76,10 +76,12 @@
     <hr> 
         <div>
           <center>
-          <p>The MKJJ Banking system was designed and developed by 2 Montclair State University Students of the Computer Science Department.</p>
+          <p>The MKJJ Banking system was designed and developed by 4 Montclair State University Students of the Computer Science Department.</p>
           <div>
 		  <p>Kenneth Doerflein</p>
           <p>Mark Mauro</p>
+		  <p>John Josephsen</p>
+		  <p>Jack Keane</p>
           </div>
           
           <div>
